@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VFOj5HXOR+w=",
+  "success": true,
+  "projectFilePath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luis\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
