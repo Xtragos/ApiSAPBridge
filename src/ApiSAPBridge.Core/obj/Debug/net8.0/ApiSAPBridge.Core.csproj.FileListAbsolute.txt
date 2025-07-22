@@ -8,6 +8,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBridge.Core.AssemblyInfoInputs.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBridge.Core.AssemblyInfo.cs
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBridge.Core.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBridge.Core.sourcelink.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBr.B85B4001.Up2Date
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\ApiSAPBridge.Core.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Core\obj\Debug\net8.0\refint\ApiSAPBridge.Core.dll

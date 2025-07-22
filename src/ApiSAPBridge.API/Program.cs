@@ -11,6 +11,47 @@ using ApiSAPBridge.Models.Constants;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+// ===== CONFIGURACIÓN DE BASE DE DATOS =====
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+}
+
+// Log de la connection string (sin password) para debug
+var maskedConnectionString = System.Text.RegularExpressions.Regex.Replace(
+    connectionString,
+    @"(Password|Pwd)=([^;]*)",
+    "$1=***",
+    System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+
+Console.WriteLine($"Using connection string: {maskedConnectionString}");
+
+// Configurar DbContext
+builder.Services.AddDbContext<ApiSAPBridgeDbContext>(options =>
+{
+    options.UseSqlServer(connectionString, sqlOptions =>
+    {
+        sqlOptions.MigrationsAssembly("ApiSAPBridge.Data");
+        sqlOptions.CommandTimeout(120);
+        sqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 3,
+            maxRetryDelay: TimeSpan.FromSeconds(5),
+            errorNumbersToAdd: null);
+    });
+
+    // Configuración adicional para development
+    if (builder.Environment.IsDevelopment())
+    {
+        options.EnableSensitiveDataLogging(true);
+        options.EnableDetailedErrors(true);
+    }
+
+    options.LogTo(Console.WriteLine, LogLevel.Information);
+});
+
 // Configurar Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -122,6 +163,14 @@ builder.Services.AddCors(options =>
 
 // Configurar middleware de autenticación personalizada
 builder.Services.AddScoped<ApiKeyAuthenticationMiddleware>();
+
+//  logging detallado
+builder.Services.AddDbContext<ApiSAPBridgeDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.EnableSensitiveDataLogging();
+    options.EnableDetailedErrors();
+});
 
 var app = builder.Build();
 

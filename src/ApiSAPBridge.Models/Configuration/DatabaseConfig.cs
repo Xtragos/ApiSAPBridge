@@ -15,7 +15,7 @@
             if (UseWindowsAuth)
             {
                 return $"Server={ServerName};Database={DatabaseName};" +
-                       $"Trusted_Connection=true;" +
+                       $"User Id={Username};Password={Password};" +
                        $"MultipleActiveResultSets={MultipleActiveResultSets};" +
                        $"TrustServerCertificate={TrustServerCertificate};";
             }

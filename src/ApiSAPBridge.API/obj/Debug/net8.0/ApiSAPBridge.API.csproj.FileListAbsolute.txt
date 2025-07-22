@@ -1,8 +1,8 @@
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\appsettings.Development.json
-C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\appsettings.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\appsettings.Production.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\ApiSAPBridge.API.staticwebassets.endpoints.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\ApiSAPBridge.API.exe
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\appsettings.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\ApiSAPBridge.API.deps.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\ApiSAPBridge.API.runtimeconfig.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\bin\Debug\net8.0\ApiSAPBridge.API.dll
@@ -154,6 +154,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBridge.API.csproj.CoreCompileInputs.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBridge.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBridge.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBridge.API.sourcelink.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json

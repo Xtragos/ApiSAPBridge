@@ -6,6 +6,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.AssemblyInfoInputs.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.AssemblyInfo.cs
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.sourcelink.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\refint\ApiSAPBridge.Models.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Models\obj\Debug\net8.0\ApiSAPBridge.Models.pdb

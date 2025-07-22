@@ -11,6 +11,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBridge.Data.AssemblyInfoInputs.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBridge.Data.AssemblyInfo.cs
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBridge.Data.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBridge.Data.sourcelink.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBr.0EEE0637.Up2Date
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\ApiSAPBridge.Data.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Data\obj\Debug\net8.0\refint\ApiSAPBridge.Data.dll

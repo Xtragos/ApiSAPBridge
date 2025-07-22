@@ -91,6 +91,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSA
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBridge.Tests.Unit.AssemblyInfoInputs.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBridge.Tests.Unit.AssemblyInfo.cs
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBridge.Tests.Unit.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBridge.Tests.Unit.sourcelink.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBr.824B57F5.Up2Date
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\ApiSAPBridge.Tests.Unit.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\test\ApiSAPBridge.Tests.Unit\obj\Debug\net8.0\refint\ApiSAPBridge.Tests.Unit.dll
