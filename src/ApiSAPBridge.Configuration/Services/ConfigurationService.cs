@@ -79,18 +79,31 @@ namespace ApiSAPBridge.Configuration.Services
             try
             {
                 using var connection = new SqlConnection(sqlConfig.GetConnectionString());
+
+                // Configurar timeout personalizado
+                //connection.ConnectionTimeout = sqlConfig.ConnectionTimeout;
+
                 await connection.OpenAsync();
+
+                // Ejecutar una consulta simple para verificar permisos
+                using var command = new SqlCommand("SELECT 1", connection);
+                await command.ExecuteScalarAsync();
 
                 _logger.Information("Prueba de conexión SQL exitosa para servidor: {Server}", sqlConfig.Server);
                 return true;
             }
+            catch (SqlException sqlEx)
+            {
+                _logger.Error(sqlEx, "Error SQL en prueba de conexión para servidor: {Server}. Código: {ErrorNumber}",
+                    sqlConfig.Server, sqlEx.Number);
+                return false;
+            }
             catch (Exception ex)
             {
-                _logger.Error(ex, "Error en prueba de conexión SQL para servidor: {Server}", sqlConfig.Server);
+                _logger.Error(ex, "Error general en prueba de conexión SQL para servidor: {Server}", sqlConfig.Server);
                 return false;
             }
         }
-
         public async Task<SecurityConfiguration> LoadSecurityConfigurationAsync()
         {
             try
