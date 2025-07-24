@@ -23,6 +23,9 @@ namespace ApiSAPBridge.Data
         public DbSet<ArticuloLinea> ArticuloLineas { get; set; } = null!;
         public DbSet<Precio> Precios { get; set; } = null!;
         public DbSet<ApiLog> ApiLogs { get; set; } = null!;
+        public DbSet<Factura> Facturas { get; set; }
+        public DbSet<FacturaDetalle> FacturaDetalles { get; set; }
+        public DbSet<FacturaPago> FacturaPagos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -41,6 +44,26 @@ namespace ApiSAPBridge.Data
             ConfigureArticuloLinea(modelBuilder);
             ConfigurePrecio(modelBuilder);
             ConfigureApiLog(modelBuilder);
+            // Configuraciones de Facturación
+            modelBuilder.Entity<Factura>()
+                .HasKey(f => new { f.NUMSERIE, f.NUMFACTURA, f.N });
+
+            modelBuilder.Entity<FacturaDetalle>()
+                .HasKey(fd => new { fd.SERIE, fd.NUMERO, fd.N, fd.LINEA });
+
+            modelBuilder.Entity<FacturaPago>()
+                .HasKey(fp => new { fp.SERIE, fp.NUMERO, fp.N, fp.POSICION });
+
+            // Relaciones
+            modelBuilder.Entity<FacturaDetalle>()
+                .HasOne(fd => fd.Factura)
+                .WithMany(f => f.Detalles)
+                .HasForeignKey(fd => new { fd.SERIE, fd.NUMERO, fd.N });
+
+            modelBuilder.Entity<FacturaPago>()
+                .HasOne(fp => fp.Factura)
+                .WithMany(f => f.Pagos)
+                .HasForeignKey(fp => new { fp.SERIE, fp.NUMERO, fp.N });
 
             // Configurar índices para optimización
             ConfigureIndexes(modelBuilder);
@@ -311,12 +334,12 @@ namespace ApiSAPBridge.Data
                 entity.HasOne(e => e.Impuesto)
                     .WithMany(i => i.Articulos)
                     .HasForeignKey(e => e.TIPOIMPUESTO)
-                    .OnDelete(DeleteBehavior.SetNull);
+                    .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(e => e.Departamento)
                     .WithMany(d => d.Articulos)
                     .HasForeignKey(e => e.DPTO)
-                    .OnDelete(DeleteBehavior.SetNull);
+                    .OnDelete(DeleteBehavior.Restrict);
             });
         }
 

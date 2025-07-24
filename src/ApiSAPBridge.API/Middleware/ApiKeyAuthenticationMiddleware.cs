@@ -1,93 +1,79 @@
-﻿using Microsoft.Extensions.Options;
+﻿using ApiSAPBridge.API.Attributes;
 using ApiSAPBridge.Models.Configuration;
 using ApiSAPBridge.Models.Constants;
+using Microsoft.Extensions.Options;
 using System.Text.Json;
 
-public class ApiKeyAuthenticationMiddleware
+namespace ApiSAPBridge.API.Middleware
 {
-    private readonly RequestDelegate _next;
-    private readonly ApiKeyConfig _apiKeyConfig;
-    private readonly ILogger<ApiKeyAuthenticationMiddleware> _logger;
-
-    public ApiKeyAuthenticationMiddleware(
-        RequestDelegate next,
-        IOptions<ApiKeyConfig> apiKeyConfig,
-        ILogger<ApiKeyAuthenticationMiddleware> logger)
+    public class ApiKeyAuthenticationMiddleware
     {
-        _next = next;
-        _apiKeyConfig = apiKeyConfig.Value;
-        _logger = logger;
-    }
+        private readonly RequestDelegate _next;
+        private readonly ILogger<ApiKeyAuthenticationMiddleware> _logger;
+        private readonly ApiKeyConfig _apiKeyConfig;
 
-    public async Task InvokeAsync(HttpContext context)
-    {
-        // Permitir endpoints GET sin autenticación
-        if (context.Request.Method == HttpMethods.Get ||
-            context.Request.Path.StartsWithSegments("/health") ||
-            context.Request.Path.StartsWithSegments("/swagger"))
+        public ApiKeyAuthenticationMiddleware(
+            RequestDelegate next,
+            ILogger<ApiKeyAuthenticationMiddleware> logger,
+            IOptions<ApiKeyConfig> apiKeyConfig)
         {
-            await _next(context);
-            return;
+            _next = next;
+            _logger = logger;
+            _apiKeyConfig = apiKeyConfig.Value;
         }
 
-        // Verificar API Key para endpoints POST
-        if (context.Request.Method == HttpMethods.Post)
+        public async Task InvokeAsync(HttpContext context)
         {
-            if (!HasValidApiKey(context.Request))
+            // Verificar si el endpoint requiere autenticación
+            var endpoint = context.GetEndpoint();
+            var requiresAuth = endpoint?.Metadata.GetMetadata<ApiKeyAuthAttribute>() != null;
+
+            if (!requiresAuth)
             {
-                await WriteUnauthorizedResponse(context, "API Key requerida o inválida");
+                await _next(context);
                 return;
             }
 
-            // Verificar Auth Token para endpoints de tarifas
-            if (context.Request.Path.StartsWithSegments("/api/tarifas"))
+            // Verificar API Key
+            if (!context.Request.Headers.TryGetValue(ApiConstants.API_KEY_HEADER, out var apiKey))
             {
-                if (!HasValidAuthToken(context.Request))
-                {
-                    await WriteUnauthorizedResponse(context, "Auth Token requerido o inválido para endpoints de tarifas");
-                    return;
-                }
+                _logger.LogWarning("API Key faltante en request a {Path}", context.Request.Path);
+                await WriteUnauthorizedResponse(context, "API Key requerida");
+                return;
             }
+
+            if (!IsValidApiKey(apiKey))
+            {
+                _logger.LogWarning("API Key inválida: {ApiKey} para {Path}", apiKey, context.Request.Path);
+                await WriteUnauthorizedResponse(context, "API Key inválida");
+                return;
+            }
+
+            _logger.LogInformation("Autenticación exitosa para {Path}", context.Request.Path);
+            await _next(context);
         }
 
-        await _next(context);
-    }
-
-    private bool HasValidApiKey(HttpRequest request)
-    {
-        if (!request.Headers.TryGetValue(ApiConstants.API_KEY_HEADER, out var extractedApiKey))
+        private bool IsValidApiKey(string apiKey)
         {
-            return false;
+            // Verificar contra las API Keys configuradas
+            return !string.IsNullOrEmpty(_apiKeyConfig.SapApiKey) &&
+                   apiKey == _apiKeyConfig.SapApiKey;
         }
 
-        return string.Equals(extractedApiKey, _apiKeyConfig.SAPApiKey, StringComparison.OrdinalIgnoreCase);
-    }
-
-    private bool HasValidAuthToken(HttpRequest request)
-    {
-        if (!request.Headers.TryGetValue(ApiConstants.AUTH_TOKEN_HEADER, out var extractedToken))
+        private async Task WriteUnauthorizedResponse(HttpContext context, string message)
         {
-            return false;
+            context.Response.StatusCode = 401;
+            context.Response.ContentType = "application/json";
+
+            var response = new
+            {
+                Success = false,
+                Message = message,
+                Timestamp = DateTime.UtcNow
+            };
+
+            var jsonResponse = JsonSerializer.Serialize(response);
+            await context.Response.WriteAsync(jsonResponse);
         }
-
-        return string.Equals(extractedToken, _apiKeyConfig.AuthToken, StringComparison.OrdinalIgnoreCase);
-    }
-
-    private async Task WriteUnauthorizedResponse(HttpContext context, string message)
-    {
-        _logger.LogWarning("Unauthorized access attempt from {RemoteIpAddress}: {Message}",
-            context.Connection.RemoteIpAddress, message);
-
-        context.Response.StatusCode = 401;
-        context.Response.ContentType = "application/json";
-
-        var response = new
-        {
-            Success = false,
-            Message = message,
-            Timestamp = DateTime.UtcNow
-        };
-
-        await context.Response.WriteAsync(JsonSerializer.Serialize(response));
     }
 }

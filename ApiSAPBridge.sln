@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.Configuration", "src\ApiSAPBridge.Configuration\ApiSAPBridge.Configuration.csproj", "{C9699BE0-60CC-4E12-A4C7-946B37768C05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.Tests.Unit", "test\ApiSAPBridge.Tests.Unit\ApiSAPBridge.Tests.Unit.csproj", "{59994E28-1EBC-4A65-8727-795485F1B274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.ConfigTool", "src\ApiSAPBridge.ConfigTool\ApiSAPBridge.ConfigTool.csproj", "{4A99782C-F638-4DBC-AC97-B4772A102D8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A99782C-F638-4DBC-AC97-B4772A102D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A99782C-F638-4DBC-AC97-B4772A102D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A99782C-F638-4DBC-AC97-B4772A102D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A99782C-F638-4DBC-AC97-B4772A102D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{0AEA8C51-8700-408C-B689-E09C7ED9E10C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C9699BE0-60CC-4E12-A4C7-946B37768C05} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{59994E28-1EBC-4A65-8727-795485F1B274} = {5A0E59DC-D1C5-4065-8809-1DD681EECAA0}
+		{4A99782C-F638-4DBC-AC97-B4772A102D8D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6276837A-7707-4533-9EB2-3EBE1137411E}

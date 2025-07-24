@@ -6,8 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Mapster" Version="7.4.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+	</ItemGroup>
+
+	<ItemGroup>
     <ProjectReference Include="..\ApiSAPBridge.Core\ApiSAPBridge.Core.csproj" />
+    <ProjectReference Include="..\ApiSAPBridge.Data\ApiSAPBridge.Data.csproj" />
     <ProjectReference Include="..\ApiSAPBridge.Models\ApiSAPBridge.Models.csproj" />
   </ItemGroup>
 

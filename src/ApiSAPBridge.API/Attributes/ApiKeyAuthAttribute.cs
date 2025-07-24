@@ -1,6 +1,10 @@
 ﻿namespace ApiSAPBridge.API.Attributes
 {
-    public class ApiKeyAuthAttribute
+    /// <summary>
+    /// Atributo para marcar endpoints que requieren autenticación por API Key
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
+    public class ApiKeyAuthAttribute : Attribute
     {
     }
 }

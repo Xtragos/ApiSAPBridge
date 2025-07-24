@@ -28,10 +28,4 @@
             }
         }
     }
-
-    public class ApiKeyConfig
-    {
-        public string SAPApiKey { get; set; } = string.Empty;
-        public string AuthToken { get; set; } = string.Empty;
-    }
 }

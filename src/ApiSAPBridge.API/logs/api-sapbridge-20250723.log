@@ -1,0 +1,62 @@
+2025-07-23 08:38:59.211 -05:00 [INF] Verificando estado de la base de datos...
+2025-07-23 08:38:59.657 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-07-23 08:38:59.890 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-07-23 08:38:59.922 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-23 08:38:59.948 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-23 08:38:59.961 -05:00 [INF] La base de datos está actualizada.
+2025-07-23 08:38:59.967 -05:00 [INF] Aplicación iniciada correctamente
+2025-07-23 08:39:00.751 -05:00 [INF] Now listening on: http://localhost:5192
+2025-07-23 08:39:00.869 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-23 08:39:00.871 -05:00 [INF] Hosting environment: Development
+2025-07-23 08:39:00.873 -05:00 [INF] Content root path: C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API
+2025-07-23 08:39:04.040 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger - null null
+2025-07-23 08:39:06.307 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger - 301 0 null 2276.171ms
+2025-07-23 08:39:06.331 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2025-07-23 08:39:06.516 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 185.7304ms
+2025-07-23 08:39:06.591 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui.css - null null
+2025-07-23 08:39:06.591 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-bundle.js - null null
+2025-07-23 08:39:06.597 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-23 08:39:06.598 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-23 08:39:06.615 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 17.8444ms
+2025-07-23 08:39:06.737 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-23 08:39:06.737 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-23 08:39:06.743 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui.css - 200 152034 text/css 151.6706ms
+2025-07-23 08:39:06.743 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 145.6558ms
+2025-07-23 08:39:07.289 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2025-07-23 08:39:07.293 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-23 08:39:07.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 715.0597ms
+2025-07-23 08:39:07.373 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.8669ms
+2025-07-23 08:39:08.153 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2025-07-23 08:39:08.199 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.9493ms
+2025-07-23 08:39:08.549 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/favicon-32x32.png - null null
+2025-07-23 08:39:08.558 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-07-23 08:39:08.561 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/favicon-32x32.png - 200 628 image/png 12.1296ms
+2025-07-23 14:59:37.313 -05:00 [INF] Verificando estado de la base de datos...
+2025-07-23 14:59:37.739 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-07-23 14:59:37.921 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-07-23 14:59:37.950 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-23 14:59:37.973 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-23 14:59:37.982 -05:00 [INF] La base de datos está actualizada.
+2025-07-23 14:59:37.987 -05:00 [INF] Aplicación iniciada correctamente
+2025-07-23 14:59:38.199 -05:00 [INF] Now listening on: http://localhost:5192
+2025-07-23 14:59:38.253 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-23 14:59:38.255 -05:00 [INF] Hosting environment: Development
+2025-07-23 14:59:38.258 -05:00 [INF] Content root path: C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API
+2025-07-23 14:59:39.331 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/index.html - null null
+2025-07-23 14:59:39.602 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/index.html - 200 null text/html;charset=utf-8 281.8123ms
+2025-07-23 14:59:39.649 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-23 14:59:39.661 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_framework/aspnetcore-browser-refresh.js - 200 16517 application/javascript; charset=utf-8 12.3416ms
+2025-07-23 14:59:39.923 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/_vs/browserLink - null null
+2025-07-23 14:59:39.990 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.6178ms
+2025-07-23 14:59:40.756 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - null null
+2025-07-23 14:59:40.811 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5192/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.0851ms

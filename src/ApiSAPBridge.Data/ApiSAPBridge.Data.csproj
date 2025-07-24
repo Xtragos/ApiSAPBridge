@@ -24,8 +24,8 @@
 	</ItemGroup>
 	
   <ItemGroup>
-    <ProjectReference Include="..\ApiSAPBridge.Core\ApiSAPBridge.Core.csproj" />
-    <ProjectReference Include="..\ApiSAPBridge.Models\ApiSAPBridge.Models.csproj" />
+	  <ProjectReference Include="..\ApiSAPBridge.Core\ApiSAPBridge.Core.csproj" />
+	  <ProjectReference Include="..\ApiSAPBridge.Models\ApiSAPBridge.Models.csproj" />
   </ItemGroup>
 
 </Project>

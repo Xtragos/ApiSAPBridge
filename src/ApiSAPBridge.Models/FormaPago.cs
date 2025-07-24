@@ -6,7 +6,7 @@ namespace ApiSAPBridge.Models
     {
         [Key]
         [StringLength(10)]
-        public string CODFORMAPAGO { get; set; } = string.Empty;
+        public int CODFORMAPAGO { get; set; }
 
         [Required]
         [StringLength(255)]

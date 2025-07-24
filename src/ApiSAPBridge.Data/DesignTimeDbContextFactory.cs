@@ -24,7 +24,7 @@ namespace ApiSAPBridge.Data
             if (string.IsNullOrEmpty(connectionString))
             {
                 // Connection string por defecto si no se encuentra en appsettings.json
-                connectionString = "Server=10.10.2.253;Database=ApiSAP;User Id=ICGAdmin;Password=masterkey;MultipleActiveResultSets=true;TrustServerCertificate=true;ConnectRetryCount=0;";
+                connectionString = "Server=ORION-LUIS;Database=ApiSAP;User Id=ICGAdmin;Password=masterkey;MultipleActiveResultSets=true;TrustServerCertificate=true;ConnectRetryCount=0;";
             }
 
             Console.WriteLine($"[DesignTime] Using connection string: {MaskPassword(connectionString)}");

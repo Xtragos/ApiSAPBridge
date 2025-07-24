@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PY4BPY0z48o=",
+  "dgSpecHash": "+lAFpUDpmGo=",
   "success": true,
   "projectFilePath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Luis\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512"
+    "C:\\Users\\Luis\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.13\\microsoft.entityframeworkcore.abstractions.8.0.13.nupkg.sha512",
+    "C:\\Users\\Luis\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

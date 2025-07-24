@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiSAPBridge.Tests.Unit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+761e0f764787905bba7e63e82b91d46d5b32f55f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+541d86f156e1a53ac85161b82ee1fa726abd4430")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiSAPBridge.Tests.Unit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiSAPBridge.Tests.Unit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,148 +3,160 @@
   "WorkspaceRootPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\attributes\\apikeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\attributes\\apikeyauthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\extensions\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\apisapbridge.configtool.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\apisapbridge.configtool.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\middleware\\apikeyauthenticationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\middleware\\apikeyauthenticationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\utils\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\utils\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\services\\sqltestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\services\\sqltestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\apisapbridge.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\apisapbridge.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\components\\swaggerconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\components\\swaggerconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\designtimedbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\components\\methodsconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\components\\methodsconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\services\\configurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\services\\configurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\configuration\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\configuration\\databaseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\authform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\components\\sqlconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\components\\sqlconfigpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\models\\configurationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\models\\configurationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configtool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4A99782C-F638-4DBC-AC97-B4772A102D8D}|src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj|solutionrelative:src\\apisapbridge.configtool\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\facturadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\facturadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\apisapbridgedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\apisapbridgedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.services\\implementations\\formapagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|solutionrelative:src\\apisapbridge.services\\implementations\\formapagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\controllers\\formaspagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\controllers\\formaspagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\apisapbridge.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\apisapbridge.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\extensions\\dbcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\extensions\\dbcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\mapping\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\mapping\\mapsterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\impuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\impuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.data\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE397E4-3019-443A-9612-1813AAE61F09}|src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj|solutionrelative:src\\apisapbridge.data\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\constants\\apiconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\constants\\apiconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\entities\\apilog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\entities\\apilog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\preciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\preciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\articulocompletodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\articulocompletodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\apisapbridge.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\apisapbridge.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\precio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\precio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\articulolinea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\articulolinea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\tarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\tarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\formapagodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\formapagodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\formapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\vendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\vendedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\facturapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\facturapago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\familia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\familia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\seccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\seccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.core\\interfaces\\ifacturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|solutionrelative:src\\apisapbridge.core\\interfaces\\ifacturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\facturadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\facturadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\articulodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\articulodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.services\\implementations\\precioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|solutionrelative:src\\apisapbridge.services\\implementations\\precioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\controllers\\precioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\controllers\\precioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.api\\controllers\\articulolineascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C88785A-4241-48BA-8847-6A1D76C7B6C8}|src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj|solutionrelative:src\\apisapbridge.api\\controllers\\articulolineascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.services\\implementations\\articulolineaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|solutionrelative:src\\apisapbridge.services\\implementations\\articulolineaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.services\\implementations\\articuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AEA8C51-8700-408C-B689-E09C7ED9E10C}|src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj|solutionrelative:src\\apisapbridge.services\\implementations\\articuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.core\\interfaces\\iprecioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|solutionrelative:src\\apisapbridge.core\\interfaces\\iprecioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.core\\interfaces\\iarticulolineaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|solutionrelative:src\\apisapbridge.core\\interfaces\\iarticulolineaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C540CD7B-1861-4F79-8931-E2B2B714BFB0}|src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj|solutionrelative:src\\apisapbridge.core\\interfaces\\iarticuloservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\preciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\preciodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.models\\dtos\\articulolineadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{924FF1D8-8C52-4EC9-8ED2-B7432659439C}|src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj|solutionrelative:src\\apisapbridge.models\\dtos\\articulolineadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,475 +166,488 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MiddlewareExtensions.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Extensions\\MiddlewareExtensions.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Extensions\\MiddlewareExtensions.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Extensions\\MiddlewareExtensions.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Extensions\\MiddlewareExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Utils\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Utils\\EncryptionHelper.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Utils\\EncryptionHelper.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Utils\\EncryptionHelper.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T21:40:08.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApiKeyAuthAttribute.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Attributes\\ApiKeyAuthAttribute.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Attributes\\ApiKeyAuthAttribute.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Attributes\\ApiKeyAuthAttribute.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Attributes\\ApiKeyAuthAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T21:39:23.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DesignTimeDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\DesignTimeDbContextFactory.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\DesignTimeDbContextFactory.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\DesignTimeDbContextFactory.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\DesignTimeDbContextFactory.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAwAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T17:36:54.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T16:57:20.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\appsettings.json",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.json",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\appsettings.json",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T12:34:21.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatabaseConfig.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Configuration\\DatabaseConfig.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Configuration\\DatabaseConfig.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Configuration\\DatabaseConfig.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Configuration\\DatabaseConfig.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBEAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:16:03.049Z",
+              "WhenOpened": "2025-07-24T17:01:27.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Program.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Program.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Program.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAYwOgAAAADAAAAAAAAAA==",
+              "Title": "SqlTestService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\SqlTestService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Services\\SqlTestService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\SqlTestService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Services\\SqlTestService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:31:46.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiKeyAuthenticationMiddleware.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Middleware\\ApiKeyAuthenticationMiddleware.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Middleware\\ApiKeyAuthenticationMiddleware.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Middleware\\ApiKeyAuthenticationMiddleware.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Middleware\\ApiKeyAuthenticationMiddleware.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:33:32.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\Extensions\\ServiceCollectionExtensions.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Extensions\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\Extensions\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwCoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:26:13.134Z",
+              "WhenOpened": "2025-07-24T17:01:04.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApiSAPBridge.API.csproj",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\ApiSAPBridge.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABEAAAAAAAAAA==",
+              "Title": "SwaggerConfigPanel.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SwaggerConfigPanel.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SwaggerConfigPanel.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SwaggerConfigPanel.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SwaggerConfigPanel.cs",
+              "ViewState": "AgIAAPYBAAAAAAAAAAAwwAwCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T17:00:25.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MethodsConfigPanel.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\MethodsConfigPanel.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\MethodsConfigPanel.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\MethodsConfigPanel.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\MethodsConfigPanel.cs",
+              "ViewState": "AgIAAAkCAAAAAAAAAAAwwB8CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:59:54.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApiSAPBridge.ConfigTool",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\ApiSAPBridge.ConfigTool.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-22T12:33:11.9Z",
+              "WhenOpened": "2025-07-24T16:37:32.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthForm.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:57:52.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Services\\AuthenticationService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\AuthenticationService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Services\\AuthenticationService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:59:00.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConfigurationService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\ConfigurationService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Services\\ConfigurationService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Services\\ConfigurationService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Services\\ConfigurationService.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAwwN8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:58:35.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\AuthForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:57:37.357Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SqlConfigPanel.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SqlConfigPanel.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SqlConfigPanel.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SqlConfigPanel.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\Components\\SqlConfigPanel.cs",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAwwFcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:57:02.977Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ApiSAPBridgeDbContext.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
-              "ViewState": "AgIAAEIBAAAAAAAAAAAcwNwBAAAfAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAIwFIBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:24:32.442Z",
+              "WhenOpened": "2025-07-24T16:50:29.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.Development.json",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T12:35:25.645Z",
-              "EditorCaption": ""
+              "Title": "MainForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Forms\\MainForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:50:10.671Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\appsettings.Production.json",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\appsettings.Production.json",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\appsettings.Production.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T12:36:05.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DbContextExtensions.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Extensions\\DbContextExtensions.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\Extensions\\DbContextExtensions.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Extensions\\DbContextExtensions.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\Extensions\\DbContextExtensions.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAowDQAAAAPAAAAAAAAAA==",
+              "Title": "ConfigurationModel.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Models\\ConfigurationModel.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Models\\ConfigurationModel.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Models\\ConfigurationModel.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Models\\ConfigurationModel.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAIwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:26:38.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Articulo.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Articulo.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Articulo.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Articulo.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAlwDUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:09:39.639Z",
+              "WhenOpened": "2025-07-24T16:49:33.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ApiSAPBridge.Data.csproj",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-22T12:27:03.329Z",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T16:37:12.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Impuesto.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Impuesto.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Impuesto.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Impuesto.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Impuesto.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAUAAAARAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.ConfigTool\\Form1.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.ConfigTool\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "src\\ApiSAPBridge.ConfigTool\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:07:21.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T16:36:55.236Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MapsterConfig.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Mapping\\MapsterConfig.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Mapping\\MapsterConfig.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Mapping\\MapsterConfig.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.API\\Mapping\\MapsterConfig.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAIAwwCIAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "FormaPagoDto.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\FormaPagoDto.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\FormaPagoDto.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\FormaPagoDto.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\FormaPagoDto.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAArwBwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:37:43.488Z",
+              "WhenOpened": "2025-07-24T13:43:19.706Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\UnitOfWork\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\UnitOfWork\\IUnitOfWork.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\UnitOfWork\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBoAAAABAAAAAAAAAA==",
+              "Title": "FormaPagoService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\FormaPagoService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Services\\Implementations\\FormaPagoService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\FormaPagoService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Services\\Implementations\\FormaPagoService.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAApwG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:28:34.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\Repositories\\GenericRepository.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAwwFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:27:52.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Repositories\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\Repositories\\IGenericRepository.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\Repositories\\IGenericRepository.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Data\\Repositories\\IGenericRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:27:24.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T13:42:35.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "ApiConstants.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Constants\\ApiConstants.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Constants\\ApiConstants.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Constants\\ApiConstants.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Constants\\ApiConstants.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwCsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:17:11.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ApiLog.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Entities\\ApiLog.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Entities\\ApiLog.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Entities\\ApiLog.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Entities\\ApiLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:14:59.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ResponseDto.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ResponseDto.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\ResponseDto.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ResponseDto.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\ResponseDto.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAxwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:14:07.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "PrecioDto.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwEEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:13:33.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ArticuloCompletoDto.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloCompletoDto.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloCompletoDto.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloCompletoDto.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloCompletoDto.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwE8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:12:54.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ApiSAPBridge.Models.csproj",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-22T02:14:36.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Precio.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Precio.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Precio.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Precio.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Precio.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:10:55.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ArticuloLinea.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ArticuloLinea.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\ArticuloLinea.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ArticuloLinea.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\ArticuloLinea.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAYwC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:10:14.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Tarifa.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Tarifa.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Tarifa.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Tarifa.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Tarifa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:09:04.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Cliente.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Cliente.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Cliente.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwDgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:08:25.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
               "Title": "FormaPago.cs",
               "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FormaPago.cs",
               "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\FormaPago.cs",
               "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FormaPago.cs",
               "RelativeToolTip": "src\\ApiSAPBridge.Models\\FormaPago.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:07:53.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T13:41:06.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApiSAPBridgeDbContext.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Data\\ApiSAPBridgeDbContext.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAASwJUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:11:41.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FacturaDto.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\FacturaDto.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\FacturaDto.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\FacturaDto.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\FacturaDto.cs",
+              "ViewState": "AgIAAP0AAAAAAAAAAIA2wAMBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:09:14.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Factura.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Factura.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Factura.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Factura.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAASwB4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:08:04.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FormasPagoController.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\FormasPagoController.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Controllers\\FormasPagoController.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\FormasPagoController.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Controllers\\FormasPagoController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAApwGYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:50:06.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Program.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Program.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Program.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAgwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:48:04.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ArticulosController.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\ArticulosController.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Controllers\\ArticulosController.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\ArticulosController.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Controllers\\ArticulosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:47:11.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IFacturaService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IFacturaService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Core\\Interfaces\\IFacturaService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IFacturaService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Core\\Interfaces\\IFacturaService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:09:53.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FacturaPago.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FacturaPago.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\FacturaPago.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FacturaPago.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\FacturaPago.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:08:52.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FacturasController.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\FacturasController.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Controllers\\FacturasController.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\FacturasController.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Controllers\\FacturasController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAwwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:11:01.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FacturaDetalle.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FacturaDetalle.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\FacturaDetalle.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\FacturaDetalle.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\FacturaDetalle.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAA9wE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T13:08:27.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PreciosController.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\PreciosController.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Controllers\\PreciosController.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\PreciosController.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Controllers\\PreciosController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAwwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T12:38:35.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ArticuloLineasController.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\ArticuloLineasController.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.API\\Controllers\\ArticuloLineasController.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.API\\Controllers\\ArticuloLineasController.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.API\\Controllers\\ArticuloLineasController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwHIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T12:38:04.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PrecioService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\PrecioService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Services\\Implementations\\PrecioService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\PrecioService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Services\\Implementations\\PrecioService.cs",
+              "ViewState": "AgIAAEEBAAAAAAAAAIAwwFABAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T12:37:08.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ArticuloDto.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloDto.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloDto.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloDto.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloDto.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAUwJYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:39:06.439Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "Vendedor.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Vendedor.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Vendedor.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Vendedor.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Vendedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Title": "ArticuloLineaService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\ArticuloLineaService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Services\\Implementations\\ArticuloLineaService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\ArticuloLineaService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Services\\Implementations\\ArticuloLineaService.cs",
+              "ViewState": "AgIAAAECAAAAAAAAAAAwwBcCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:06:49.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T12:36:34.955Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "Familia.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Familia.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Familia.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Familia.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Familia.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Title": "ArticuloService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\ArticuloService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Services\\Implementations\\ArticuloService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\Implementations\\ArticuloService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Services\\Implementations\\ArticuloService.cs",
+              "ViewState": "AgIAAGUCAAAAAAAAAAAYwIkCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:06:15.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T02:46:07.219Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "Seccion.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Seccion.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Seccion.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Seccion.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Seccion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Title": "IPrecioService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IPrecioService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Core\\Interfaces\\IPrecioService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IPrecioService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Core\\Interfaces\\IPrecioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:05:31.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T02:45:31.412Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "Departamento.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Departamento.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\Departamento.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\Departamento.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Models\\Departamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Title": "IArticuloLineaService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IArticuloLineaService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Core\\Interfaces\\IArticuloLineaService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IArticuloLineaService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Core\\Interfaces\\IArticuloLineaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T02:04:37.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T02:45:01.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IArticuloService.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IArticuloService.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Core\\Interfaces\\IArticuloService.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\Interfaces\\IArticuloService.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Core\\Interfaces\\IArticuloService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:44:26.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PrecioDto.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\PrecioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:43:26.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ArticuloLineaDto.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloLineaDto.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloLineaDto.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\DTOs\\ArticuloLineaDto.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Models\\DTOs\\ArticuloLineaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T02:39:57.25Z"
             }
           ]
         }

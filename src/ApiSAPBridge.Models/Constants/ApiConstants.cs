@@ -10,11 +10,19 @@
             public const string SUCCESS_CREATED = "Registros creados exitosamente";
             public const string SUCCESS_UPDATED = "Registros actualizados exitosamente";
             public const string SUCCESS_RETRIEVED = "Datos obtenidos exitosamente";
+            public const string SUCCESS_CREATE = "Recursos creados exitosamente";
+            public const string SUCCESS_RETRIEVE = "Recursos obtenidos exitosamente";
+            public const string SUCCESS_UPDATE = "Recursos actualizados exitosamente";
+            public const string SUCCESS_DELETE = "Recursos eliminados exitosamente";
+
             public const string ERROR_VALIDATION = "Error de validación en los datos";
             public const string ERROR_DUPLICATE = "Ya existe un registro con esos datos";
             public const string ERROR_NOT_FOUND = "Registro no encontrado";
             public const string ERROR_DATABASE = "Error en la base de datos";
             public const string ERROR_UNAUTHORIZED = "No autorizado - API Key inválida";
+            public const string ERROR_GENERIC = "Ha ocurrido un error interno del servidor";
+            public const string ERROR_FORBIDDEN = "Acceso prohibido";
+
         }
 
         public static class ValidationMessages

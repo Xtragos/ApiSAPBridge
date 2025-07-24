@@ -1,13 +1,18 @@
+using ApiSAPBridge.Core.Interfaces;
+using ApiSAPBridge.Services.Implementations;
+using ApiSAPBridge.Data.UnitOfWork;
+using ApiSAPBridge.Data;
+using ApiSAPBridge.Data.Extensions;
+
+//using ApiSAPBridge.Data.UnitOfWork;
+using ApiSAPBridge.Models.Configuration;
+using ApiSAPBridge.Models.Constants;
+using Mapster;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Sinks.MSSqlServer;
-using Mapster;
-using MapsterMapper;
-using ApiSAPBridge.Data;
-using ApiSAPBridge.Data.Extensions;
-using ApiSAPBridge.Data.UnitOfWork;
-using ApiSAPBridge.Models.Configuration;
-using ApiSAPBridge.Models.Constants;
+using ApiSAPBridge.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -95,12 +100,29 @@ builder.Services.AddControllers()
 // Configurar Entity Framework
 builder.Services.AddApiSAPBridgeData(builder.Configuration);
 
-// Configurar Unit of Work
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+// Configurar Unit of Work - LÍNEA CRÍTICA
+builder.Services.AddScoped<ApiSAPBridge.Core.Interfaces.IUnitOfWork, ApiSAPBridge.Data.UnitOfWork.UnitOfWork>();
+
+// Registrar servicios de negocio
+builder.Services.AddScoped<IDepartamentoService, DepartamentoService>();
+builder.Services.AddScoped<ISeccionService, SeccionService>();
+builder.Services.AddScoped<IFamiliaService, FamiliaService>();
+builder.Services.AddScoped<IVendedorService, VendedorService>();
+builder.Services.AddScoped<IImpuestoService, ImpuestoService>(); 
+builder.Services.AddScoped<IFormaPagoService, FormaPagoService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<ITarifaService, TarifaService>();
+builder.Services.AddScoped<IArticuloService, ArticuloService>();          
+builder.Services.AddScoped<IArticuloLineaService, ArticuloLineaService>(); 
+builder.Services.AddScoped<IPrecioService, PrecioService>();
+builder.Services.AddScoped<IFacturaService, FacturaService>();
+
 
 // Configurar Mapster
-builder.Services.AddMapster();
-TypeAdapterConfig.GlobalSettings.Scan(typeof(Program).Assembly);
+//builder.Services.AddMapster();
+//TypeAdapterConfig.GlobalSettings.Scan(typeof(Program).Assembly);
+// Configurar Mapster
+ApiSAPBridge.API.Mapping.MapsterConfig.Configure();
 
 // Configurar opciones
 builder.Services.Configure<ApiKeyConfig>(
@@ -162,7 +184,7 @@ builder.Services.AddCors(options =>
 });
 
 // Configurar middleware de autenticación personalizada
-builder.Services.AddScoped<ApiKeyAuthenticationMiddleware>();
+//builder.Services.AddScoped<ApiKeyAuthenticationMiddleware>();
 
 //  logging detallado
 builder.Services.AddDbContext<ApiSAPBridgeDbContext>(options =>
