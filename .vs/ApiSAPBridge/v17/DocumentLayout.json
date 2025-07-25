@@ -1,53 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CB8466D2-F19A-4E65-9E38-66257C1AE35E}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\usercontrols\\sqlconfigurationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CB8466D2-F19A-4E65-9E38-66257C1AE35E}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\usercontrols\\sqlconfigurationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB8466D2-F19A-4E65-9E38-66257C1AE35E}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\services\\configurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB8466D2-F19A-4E65-9E38-66257C1AE35E}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\services\\configurationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConfigurationService.cs",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Services\\ConfigurationService.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\Services\\ConfigurationService.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Services\\ConfigurationService.cs",
-              "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Services\\ConfigurationService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAuwFUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T23:25:11.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SqlConfigurationControl.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\UserControls\\SqlConfigurationControl.cs",
-              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\UserControls\\SqlConfigurationControl.cs",
-              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\UserControls\\SqlConfigurationControl.cs [Dise\u00F1o]",
-              "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\UserControls\\SqlConfigurationControl.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T23:24:26.292Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

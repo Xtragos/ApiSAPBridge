@@ -1,8 +1,6 @@
 ﻿using ApiSAPBridge.Configuration.Models;
 using ApiSAPBridge.Configuration.Services;
-using System.ComponentModel;
 using System.Data.SqlClient;
-using Serilog;
 
 namespace ApiSAPBridge.Configuration.UserControls
 {
@@ -10,333 +8,129 @@ namespace ApiSAPBridge.Configuration.UserControls
     {
         private readonly IConfigurationService _configurationService;
         private SqlServerConfiguration _configuration;
-        private readonly ILogger _logger;
-        private readonly Timer _validationTimer;
-        private bool _isUpdatingControls = false;
 
         public SqlConfigurationControl(IConfigurationService configurationService, SqlServerConfiguration configuration)
         {
             _configurationService = configurationService;
-            _configuration = configuration ?? new SqlServerConfiguration();
-            _logger = Log.ForContext<SqlConfigurationControl>();
+            _configuration = configuration;
 
             InitializeComponent();
-
-            // Timer para validaciones con delay
-            _validationTimer = new Timer();
-            _validationTimer.Interval = 500; // 500ms delay
-            _validationTimer.Tick += ValidationTimer_Tick;
-
             LoadConfiguration();
-            AttachEventHandlers();
+            SetupValidations();
         }
 
         private void LoadConfiguration()
         {
-            _isUpdatingControls = true;
+            // Cargar configuración en controles
+            txtServer.Text = _configuration.Server;
+            txtDatabase.Text = _configuration.Database;
+            txtUsername.Text = _configuration.Username ?? "";
+            txtPassword.Text = _configuration.Password ?? "";
+            chkWindowsAuth.Checked = _configuration.UseWindowsAuthentication;
+            numConnectionTimeout.Value = _configuration.ConnectionTimeout;
+            chkTrustServerCertificate.Checked = _configuration.TrustServerCertificate;
 
-            try
-            {
-                // Cargar configuración en controles
-                txtServer.Text = _configuration.Server;
-                txtDatabase.Text = _configuration.Database;
-                txtUsername.Text = _configuration.Username ?? "";
-                txtPassword.Text = _configuration.Password ?? "";
-                chkWindowsAuth.Checked = _configuration.UseWindowsAuthentication;
-                numConnectionTimeout.Value = _configuration.ConnectionTimeout;
-                chkTrustServerCert.Checked = _configuration.TrustServerCertificate;
-
-                // Actualizar estado de controles
-                UpdateAuthenticationControls();
-                UpdateConnectionString();
-                ValidateConfiguration();
-
-                _logger.Information("Configuración SQL cargada en controles");
-            }
-            finally
-            {
-                _isUpdatingControls = false;
-            }
+            // Actualizar estado de controles
+            UpdateAuthenticationControls();
         }
 
-        private void AttachEventHandlers()
+        private void SetupValidations()
         {
-            // Eventos de cambio para validación automática
-            txtServer.TextChanged += Control_Changed;
-            txtDatabase.TextChanged += Control_Changed;
-            txtUsername.TextChanged += Control_Changed;
-            txtPassword.TextChanged += Control_Changed;
-            chkWindowsAuth.CheckedChanged += WindowsAuth_CheckedChanged;
-            numConnectionTimeout.ValueChanged += Control_Changed;
-            chkTrustServerCert.CheckedChanged += Control_Changed;
-
-            // Eventos de validación en tiempo real
-            txtServer.Leave += ValidateServer;
-            txtDatabase.Leave += ValidateDatabase;
-            txtUsername.Leave += ValidateUsername;
-            txtPassword.Leave += ValidatePassword;
+            // Validaciones en tiempo real
+            txtServer.TextChanged += ValidateForm;
+            txtDatabase.TextChanged += ValidateForm;
+            txtUsername.TextChanged += ValidateForm;
+            txtPassword.TextChanged += ValidateForm;
+            chkWindowsAuth.CheckedChanged += OnAuthenticationModeChanged;
         }
 
-        private void Control_Changed(object sender, EventArgs e)
-        {
-            if (_isUpdatingControls) return;
-
-            // Restart timer para validación con delay
-            _validationTimer.Stop();
-            _validationTimer.Start();
-
-            UpdateConnectionString();
-        }
-
-        private void ValidationTimer_Tick(object sender, EventArgs e)
-        {
-            _validationTimer.Stop();
-            ValidateConfiguration();
-        }
-
-        private void WindowsAuth_CheckedChanged(object sender, EventArgs e)
+        private void OnAuthenticationModeChanged(object sender, EventArgs e)
         {
             UpdateAuthenticationControls();
-            Control_Changed(sender, e);
+            ValidateForm(sender, e);
         }
 
         private void UpdateAuthenticationControls()
         {
-            bool isWindowsAuth = chkWindowsAuth.Checked;
+            bool useWindowsAuth = chkWindowsAuth.Checked;
 
-            txtUsername.Enabled = !isWindowsAuth;
-            txtPassword.Enabled = !isWindowsAuth;
-            lblUsername.Enabled = !isWindowsAuth;
-            lblPassword.Enabled = !isWindowsAuth;
+            txtUsername.Enabled = !useWindowsAuth;
+            txtPassword.Enabled = !useWindowsAuth;
+            lblUsername.Enabled = !useWindowsAuth;
+            lblPassword.Enabled = !useWindowsAuth;
 
-            if (isWindowsAuth)
+            if (useWindowsAuth)
             {
-                txtUsername.BackColor = SystemColors.Control;
-                txtPassword.BackColor = SystemColors.Control;
-            }
-            else
-            {
-                txtUsername.BackColor = SystemColors.Window;
-                txtPassword.BackColor = SystemColors.Window;
+                txtUsername.Text = "";
+                txtPassword.Text = "";
             }
         }
 
-        private void UpdateConnectionString()
+        private void ValidateForm(object sender, EventArgs e)
         {
-            try
-            {
-                var tempConfig = GetConfiguration();
-                txtConnectionString.Text = tempConfig.GetConnectionString();
-                txtConnectionString.BackColor = SystemColors.Window;
-            }
-            catch (Exception ex)
-            {
-                txtConnectionString.Text = $"Error: {ex.Message}";
-                txtConnectionString.BackColor = Color.LightCoral;
-            }
-        }
-
-        private void ValidateConfiguration()
-        {
+            bool isValid = true;
             var errors = new List<string>();
 
             // Validar servidor
             if (string.IsNullOrWhiteSpace(txtServer.Text))
             {
                 errors.Add("El servidor es requerido");
-                SetControlError(txtServer, "Campo requerido");
-            }
-            else
-            {
-                ClearControlError(txtServer);
+                isValid = false;
             }
 
             // Validar base de datos
             if (string.IsNullOrWhiteSpace(txtDatabase.Text))
             {
                 errors.Add("La base de datos es requerida");
-                SetControlError(txtDatabase, "Campo requerido");
-            }
-            else
-            {
-                ClearControlError(txtDatabase);
+                isValid = false;
             }
 
-            // Validar credenciales SQL Server
+            // Validar autenticación SQL
             if (!chkWindowsAuth.Checked)
             {
                 if (string.IsNullOrWhiteSpace(txtUsername.Text))
                 {
-                    errors.Add("El usuario es requerido para autenticación SQL Server");
-                    SetControlError(txtUsername, "Campo requerido");
-                }
-                else
-                {
-                    ClearControlError(txtUsername);
-                }
-
-                if (string.IsNullOrWhiteSpace(txtPassword.Text))
-                {
-                    errors.Add("La contraseña es requerida para autenticación SQL Server");
-                    SetControlError(txtPassword, "Campo requerido");
-                }
-                else
-                {
-                    ClearControlError(txtPassword);
+                    errors.Add("El usuario es requerido para autenticación SQL");
+                    isValid = false;
                 }
             }
 
-            // Actualizar estado de validación
-            bool isValid = !errors.Any();
+            // Actualizar interfaz
             btnTestConnection.Enabled = isValid;
-
-            if (isValid)
-            {
-                lblValidationStatus.Text = "✅ Configuración válida";
-                lblValidationStatus.ForeColor = Color.Green;
-            }
-            else
-            {
-                lblValidationStatus.Text = $"❌ {errors.Count} error(es) encontrado(s)";
-                lblValidationStatus.ForeColor = Color.Red;
-                toolTip.SetToolTip(lblValidationStatus, string.Join("\n", errors));
-            }
+            lblValidationMessage.Text = isValid ? "✅ Configuración válida" : $"❌ {string.Join(", ", errors)}";
+            lblValidationMessage.ForeColor = isValid ? Color.Green : Color.Red;
         }
-
-        private void SetControlError(Control control, string message)
-        {
-            control.BackColor = Color.LightCoral;
-            toolTip.SetToolTip(control, message);
-        }
-
-        private void ClearControlError(Control control)
-        {
-            control.BackColor = SystemColors.Window;
-            toolTip.SetToolTip(control, "");
-        }
-
-        #region Validaciones específicas
-
-        private void ValidateServer(object sender, EventArgs e)
-        {
-            var text = txtServer.Text.Trim();
-
-            if (string.IsNullOrEmpty(text))
-            {
-                SetControlError(txtServer, "El servidor es requerido");
-                return;
-            }
-
-            // Validaciones adicionales del formato del servidor
-            if (text.Contains(" ") && !text.Contains("\\"))
-            {
-                SetControlError(txtServer, "Formato de servidor inválido");
-                return;
-            }
-
-            ClearControlError(txtServer);
-        }
-
-        private void ValidateDatabase(object sender, EventArgs e)
-        {
-            var text = txtDatabase.Text.Trim();
-
-            if (string.IsNullOrEmpty(text))
-            {
-                SetControlError(txtDatabase, "La base de datos es requerida");
-                return;
-            }
-
-            // Validar caracteres no permitidos
-            char[] invalidChars = { '\\', '/', ':', '*', '?', '"', '<', '>', '|' };
-            if (text.IndexOfAny(invalidChars) >= 0)
-            {
-                SetControlError(txtDatabase, "Nombre de base de datos contiene caracteres inválidos");
-                return;
-            }
-
-            ClearControlError(txtDatabase);
-        }
-
-        private void ValidateUsername(object sender, EventArgs e)
-        {
-            if (chkWindowsAuth.Checked) return;
-
-            var text = txtUsername.Text.Trim();
-
-            if (string.IsNullOrEmpty(text))
-            {
-                SetControlError(txtUsername, "El usuario es requerido");
-                return;
-            }
-
-            ClearControlError(txtUsername);
-        }
-
-        private void ValidatePassword(object sender, EventArgs e)
-        {
-            if (chkWindowsAuth.Checked) return;
-
-            var text = txtPassword.Text;
-
-            if (string.IsNullOrEmpty(text))
-            {
-                SetControlError(txtPassword, "La contraseña es requerida");
-                return;
-            }
-
-            ClearControlError(txtPassword);
-        }
-
-        #endregion
-
-        #region Eventos de botones
 
         private async void btnTestConnection_Click(object sender, EventArgs e)
         {
-            await TestConnection();
-        }
-
-        private async Task TestConnection()
-        {
-            btnTestConnection.Enabled = false;
-            lblConnectionStatus.Text = "🔄 Probando conexión...";
-            lblConnectionStatus.ForeColor = Color.Blue;
-            progressBar.Style = ProgressBarStyle.Marquee;
-            progressBar.Visible = true;
-
             try
             {
-                var testConfig = GetConfiguration();
-                _logger.Information("Iniciando prueba de conexión a {Server}/{Database}", testConfig.Server, testConfig.Database);
+                btnTestConnection.Enabled = false;
+                btnTestConnection.Text = "Probando...";
+                lblConnectionStatus.Text = "🔄 Probando conexión...";
+                lblConnectionStatus.ForeColor = Color.Blue;
 
-                var isConnected = await _configurationService.TestSqlConnectionAsync(testConfig);
+                // Crear configuración temporal
+                var tempConfig = GetConfiguration();
 
-                if (isConnected)
+                // Probar conexión
+                var success = await _configurationService.TestSqlConnectionAsync(tempConfig);
+
+                if (success)
                 {
                     lblConnectionStatus.Text = "✅ Conexión exitosa";
                     lblConnectionStatus.ForeColor = Color.Green;
 
-                    MessageBox.Show(
-                        $"Conexión exitosa a:\nServidor: {testConfig.Server}\nBase de datos: {testConfig.Database}",
-                        "Prueba de Conexión",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-
-                    _logger.Information("Conexión SQL exitosa");
+                    MessageBox.Show(ConfigurationConstants.Messages.CONNECTION_SUCCESS,
+                        "Prueba de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     lblConnectionStatus.Text = "❌ Error de conexión";
                     lblConnectionStatus.ForeColor = Color.Red;
 
-                    MessageBox.Show(
-                        "No se pudo conectar a la base de datos.\nVerifique la configuración e intente nuevamente.",
-                        "Error de Conexión",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-
-                    _logger.Warning("Fallo en prueba de conexión SQL");
+                    MessageBox.Show(ConfigurationConstants.Messages.CONNECTION_FAILED,
+                        "Prueba de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -344,107 +138,69 @@ namespace ApiSAPBridge.Configuration.UserControls
                 lblConnectionStatus.Text = "❌ Error de conexión";
                 lblConnectionStatus.ForeColor = Color.Red;
 
-                MessageBox.Show(
-                    $"Error al probar la conexión:\n{ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-
-                _logger.Error(ex, "Error en prueba de conexión SQL");
+                MessageBox.Show($"Error al probar la conexión: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 btnTestConnection.Enabled = true;
-                progressBar.Visible = false;
+                btnTestConnection.Text = "Probar Conexión";
             }
         }
 
         private void btnResetDefaults_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show(
-                "¿Está seguro que desea restaurar los valores por defecto?",
-                "Confirmar",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
+            var result = MessageBox.Show("¿Está seguro que desea restaurar los valores por defecto?",
+                "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                _configuration = new SqlServerConfiguration
-                {
-                    Server = ConfigurationConstants.DefaultValues.DEFAULT_SERVER,
-                    Database = ConfigurationConstants.DefaultValues.DEFAULT_DATABASE,
-                    UseWindowsAuthentication = true,
-                    ConnectionTimeout = ConfigurationConstants.DefaultValues.DEFAULT_CONNECTION_TIMEOUT,
-                    TrustServerCertificate = true
-                };
-
+                _configuration = new SqlServerConfiguration();
                 LoadConfiguration();
-                _logger.Information("Configuración SQL restaurada a valores por defecto");
             }
         }
 
-        private void btnCopyConnectionString_Click(object sender, EventArgs e)
+        private void btnGenerateConnectionString_Click(object sender, EventArgs e)
         {
             try
             {
-                Clipboard.SetText(txtConnectionString.Text);
+                var config = GetConfiguration();
+                var connectionString = config.GetConnectionString();
 
-                // Mostrar feedback temporal
-                var originalText = btnCopyConnectionString.Text;
-                btnCopyConnectionString.Text = "¡Copiado!";
-                btnCopyConnectionString.BackColor = Color.LightGreen;
+                using var form = new Form();
+                var textBox = new TextBox();
 
-                Timer resetTimer = new Timer();
-                resetTimer.Interval = 2000;
-                resetTimer.Tick += (s, args) =>
-                {
-                    btnCopyConnectionString.Text = originalText;
-                    btnCopyConnectionString.BackColor = SystemColors.Control;
-                    resetTimer.Stop();
-                    resetTimer.Dispose();
-                };
-                resetTimer.Start();
+                form.Text = "Cadena de Conexión Generada";
+                form.Size = new Size(600, 200);
+                form.StartPosition = FormStartPosition.CenterParent;
 
-                _logger.Information("Cadena de conexión copiada al portapapeles");
+                textBox.Text = connectionString;
+                textBox.Multiline = true;
+                textBox.ReadOnly = true;
+                textBox.Dock = DockStyle.Fill;
+                textBox.ScrollBars = ScrollBars.Both;
+
+                form.Controls.Add(textBox);
+                form.ShowDialog(this);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al copiar: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _logger.Error(ex, "Error al copiar cadena de conexión");
+                MessageBox.Show($"Error al generar cadena de conexión: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #endregion
 
         public SqlServerConfiguration GetConfiguration()
         {
-            return new SqlServerConfiguration
-            {
-                Server = txtServer.Text.Trim(),
-                Database = txtDatabase.Text.Trim(),
-                Username = chkWindowsAuth.Checked ? null : txtUsername.Text.Trim(),
-                Password = chkWindowsAuth.Checked ? null : txtPassword.Text,
-                UseWindowsAuthentication = chkWindowsAuth.Checked,
-                ConnectionTimeout = (int)numConnectionTimeout.Value,
-                TrustServerCertificate = chkTrustServerCert.Checked
-            };
-        }
+            _configuration.Server = txtServer.Text.Trim();
+            _configuration.Database = txtDatabase.Text.Trim();
+            _configuration.Username = chkWindowsAuth.Checked ? null : txtUsername.Text.Trim();
+            _configuration.Password = chkWindowsAuth.Checked ? null : txtPassword.Text;
+            _configuration.UseWindowsAuthentication = chkWindowsAuth.Checked;
+            _configuration.ConnectionTimeout = (int)numConnectionTimeout.Value;
+            _configuration.TrustServerCertificate = chkTrustServerCertificate.Checked;
 
-        public void UpdateConfiguration(SqlServerConfiguration configuration)
-        {
-            _configuration = configuration;
-            LoadConfiguration();
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                _validationTimer?.Dispose();
-                components?.Dispose();
-            }
-            base.Dispose(disposing);
+            return _configuration;
         }
     }
 }

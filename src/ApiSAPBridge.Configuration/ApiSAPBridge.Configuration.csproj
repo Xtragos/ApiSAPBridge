@@ -9,6 +9,7 @@
   </PropertyGroup>
 	<ItemGroup>
 		<!-- En ApiSAPBridge.Configuration.csproj -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.3" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.7" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.7" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.7" />

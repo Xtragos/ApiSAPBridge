@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using ApiSAPBridge.Configuration.Models;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace ApiSAPBridge.Configuration.Helpers
@@ -83,6 +84,45 @@ namespace ApiSAPBridge.Configuration.Helpers
             var remaining = lockoutExpiry - DateTime.Now;
 
             return remaining > TimeSpan.Zero ? remaining : TimeSpan.Zero;
+        }
+        /// <summary>
+        /// Valida que la configuración sea segura
+        /// </summary>
+        public static List<string> ValidateSecurityConfiguration(SecurityConfiguration config)
+        {
+            var warnings = new List<string>();
+
+            if (config.ConfigurationPassword == "admin123")
+            {
+                warnings.Add("⚠️ Se recomienda cambiar la contraseña por defecto");
+            }
+
+            if (config.ConfigurationPassword.Length < 6)
+            {
+                warnings.Add("⚠️ La contraseña debe tener al menos 6 caracteres");
+            }
+
+            if (config.MaxLoginAttempts > 5)
+            {
+                warnings.Add("⚠️ Se recomienda un máximo de 5 intentos de login");
+            }
+
+            if (config.LockoutMinutes < 5)
+            {
+                warnings.Add("⚠️ Se recomienda un bloqueo mínimo de 5 minutos");
+            }
+
+            return warnings;
+        }
+
+        /// <summary>
+        /// Genera una contraseña segura aleatoria
+        /// </summary>
+        public static string GenerateSecurePassword(int length = 12)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+            var random = new Random();
+            return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
     }
 }
