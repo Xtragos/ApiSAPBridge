@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiSAPBridge.Configuration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8192b52064b95aca81d2981f25381b40ee5dfb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be9eed9a7d3b40d589c6bf043c4094dbc3529e19")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiSAPBridge.Configuration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiSAPBridge Configuration Manager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

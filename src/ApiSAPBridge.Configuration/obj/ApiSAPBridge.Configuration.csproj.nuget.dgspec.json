@@ -32,7 +32,20 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj"
+              }
+            }
           }
         },
         "restoreAuditProperties": {
@@ -56,21 +69,21 @@
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.1, )"
+              "version": "[5.1.6, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -82,7 +95,7 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.1, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
@@ -130,6 +143,363 @@
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj",
+        "projectName": "ApiSAPBridge.Core",
+        "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj",
+        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "System.Linq.Expressions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
+        "projectName": "ApiSAPBridge.Data",
+        "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj",
+        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
+        "projectName": "ApiSAPBridge.Models",
+        "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj",
+        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj",
+        "projectName": "ApiSAPBridge.Services",
+        "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\ApiSAPBridge.Services.csproj",
+        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
+        "outputPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Core\\ApiSAPBridge.Core.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Data\\ApiSAPBridge.Data.csproj"
+              },
+              "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj": {
+                "projectPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Models\\ApiSAPBridge.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"

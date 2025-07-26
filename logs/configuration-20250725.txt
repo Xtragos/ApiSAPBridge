@@ -1,0 +1,38 @@
+2025-07-25 21:50:59.819 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 21:50:59.881 -05:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 21:50:59.884 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 21:50:59.886 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 21:50:59.900 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-25 21:50:59.913 -05:00 [INF] Applying migration '20250726022947_AddConfigurationTables'.
+2025-07-25 21:50:59.959 -05:00 [ERR] Error al aplicar migraciones
+System.InvalidOperationException: To change the IDENTITY property of a column, the column needs to be dropped and recreated.
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(AlterColumnOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.<>c.<.cctor>b__82_4(MigrationsSqlGenerator g, MigrationOperation o, IModel m, MigrationCommandListBuilder b)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.GenerateUpSql(Migration migration, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c__DisplayClass16_2.<GetMigrationCommandLists>b__2()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at ApiSAPBridge.Configuration.Program.EnsureDatabaseCreatedAsync(IServiceProvider serviceProvider) in C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\Program.cs:line 100
+2025-07-25 21:50:59.983 -05:00 [FTL] La aplicación falló al iniciar
+System.InvalidOperationException: To change the IDENTITY property of a column, the column needs to be dropped and recreated.
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(AlterColumnOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.<>c.<.cctor>b__82_4(MigrationsSqlGenerator g, MigrationOperation o, IModel m, MigrationCommandListBuilder b)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(MigrationOperation operation, IModel model, MigrationCommandListBuilder builder)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.SqlServerMigrationsSqlGenerator.Generate(IReadOnlyList`1 operations, IModel model, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.GenerateUpSql(Migration migration, MigrationsSqlGenerationOptions options)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.<>c__DisplayClass16_2.<GetMigrationCommandLists>b__2()
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.MigrateAsync(String targetMigration, CancellationToken cancellationToken)
+   at ApiSAPBridge.Configuration.Program.EnsureDatabaseCreatedAsync(IServiceProvider serviceProvider) in C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\Program.cs:line 100
+   at ApiSAPBridge.Configuration.Program.Main() in C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\Program.cs:line 33

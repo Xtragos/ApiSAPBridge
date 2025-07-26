@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

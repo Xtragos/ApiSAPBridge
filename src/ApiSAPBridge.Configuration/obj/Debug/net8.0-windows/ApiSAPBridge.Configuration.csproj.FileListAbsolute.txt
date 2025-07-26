@@ -8,6 +8,8 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\FluentValidation.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Humanizer.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Mapster.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Mapster.Core.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
@@ -65,6 +67,7 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Serilog.Extensions.Logging.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Serilog.Sinks.Console.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\Serilog.Sinks.File.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\System.ClientModel.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\System.Composition.AttributedModel.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\System.Composition.Convention.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\System.Composition.Hosting.dll
@@ -133,8 +136,18 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Core.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Data.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Models.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Services.dll
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Core.pdb
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Data.pdb
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Models.pdb
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\bin\Debug\net8.0-windows\ApiSAPBridge.Services.pdb
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.csproj.AssemblyReference.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.Form1.resources
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.UI.Forms.MainForm.resources
+C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.UI.Forms.SqlConfigForm.resources
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.csproj.GenerateResource.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.GeneratedMSBuildEditorConfig.editorconfig
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.AssemblyInfoInputs.cache
@@ -147,5 +160,3 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.pdb
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.genruntimeconfig.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ref\ApiSAPBridge.Configuration.dll
-C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.UI.Forms.MainForm.resources
-C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.Configuration\obj\Debug\net8.0-windows\ApiSAPBridge.Configuration.UI.Forms.SqlConfigForm.resources

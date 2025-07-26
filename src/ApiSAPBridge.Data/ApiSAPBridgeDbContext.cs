@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ApiSAPBridge.Models;
 using ApiSAPBridge.Models.Entities;
+using ApiSAPBridge.Models.Configuration;
 
 namespace ApiSAPBridge.Data
 {
@@ -26,6 +27,11 @@ namespace ApiSAPBridge.Data
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<FacturaDetalle> FacturaDetalles { get; set; }
         public DbSet<FacturaPago> FacturaPagos { get; set; }
+        public DbSet<SqlConfiguration> SqlConfigurations { get; set; } = null!;
+        public DbSet<MethodConfiguration> MethodConfigurations { get; set; } = null!;
+        public DbSet<SwaggerConfiguration> SwaggerConfigurations { get; set; } = null!;
+        public DbSet<SystemConfiguration> SystemConfigurations { get; set; } = null!;
+        public DbSet<SecurityConfiguration> SecurityConfigurations { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -67,6 +73,13 @@ namespace ApiSAPBridge.Data
 
             // Configurar índices para optimización
             ConfigureIndexes(modelBuilder);
+
+            ConfigureSqlConfiguration(modelBuilder);
+            ConfigureMethodConfiguration(modelBuilder);
+            ConfigureSwaggerConfiguration(modelBuilder);
+            ConfigureSystemConfiguration(modelBuilder);
+            ConfigureSecurityConfiguration(modelBuilder);
+
         }
 
         private void ConfigureDepartamento(ModelBuilder modelBuilder)
@@ -526,5 +539,158 @@ namespace ApiSAPBridge.Data
                 }
             }
         }
+        private void ConfigureSqlConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SqlConfiguration>(entity =>
+            {
+                entity.ToTable("SqlConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Server)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Database)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.Server, e.Database })
+                    .IsUnique()
+                    .HasDatabaseName("IX_SqlConfigurations_ServerDatabase");
+            });
+        }
+
+        private void ConfigureMethodConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MethodConfiguration>(entity =>
+            {
+                entity.ToTable("MethodConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.MethodName)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.HttpMethod)
+                    .IsRequired()
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Endpoint)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
+                    .IsUnique()
+                    .HasDatabaseName("IX_MethodConfigurations_MethodHttpMethod");
+            });
+        }
+
+        private void ConfigureSwaggerConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SwaggerConfiguration>(entity =>
+            {
+                entity.ToTable("SwaggerConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.MethodName)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.HttpMethod)
+                    .IsRequired()
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Endpoint)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Category)
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
+                    .IsUnique()
+                    .HasDatabaseName("IX_SwaggerConfigurations_MethodHttpMethod");
+            });
+        }
+
+        private void ConfigureSystemConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SystemConfiguration>(entity =>
+            {
+                entity.ToTable("SystemConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Key)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Value)
+                    .IsRequired()
+                    .HasMaxLength(2000);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => e.Key)
+                    .IsUnique()
+                    .HasDatabaseName("IX_SystemConfigurations_Key");
+            });
+        }
+
+        private void ConfigureSecurityConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SecurityConfiguration>(entity =>
+            {
+                entity.ToTable("SecurityConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.PasswordHash)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+            });
+        }
+    
     }
 }

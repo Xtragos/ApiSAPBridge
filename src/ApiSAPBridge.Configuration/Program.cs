@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using ApiSAPBridge.Configuration.Data;
+using ApiSAPBridge.Data;
 using ApiSAPBridge.Configuration.Services;
 using ApiSAPBridge.Configuration.UI.Forms;
 
@@ -13,13 +13,9 @@ namespace ApiSAPBridge.Configuration
     {
         public static IServiceProvider ServiceProvider { get; private set; } = null!;
 
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static async Task Main()
         {
-            // Configurar Serilog
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.File("logs/configuration-.txt", rollingInterval: RollingInterval.Day)
@@ -28,18 +24,14 @@ namespace ApiSAPBridge.Configuration
 
             try
             {
-                // To customize application configuration such as set high DPI settings or default font,
-                // see https://aka.ms/applicationconfiguration.
                 ApplicationConfiguration.Initialize();
 
-                // Configurar servicios
                 var services = ConfigureServices();
                 ServiceProvider = services.BuildServiceProvider();
 
-                // Ejecutar migraciones
+                // Ejecutar migración para agregar tablas de configuración
                 await EnsureDatabaseCreatedAsync(ServiceProvider);
 
-                // Iniciar aplicación
                 var mainForm = ServiceProvider.GetRequiredService<MainForm>();
                 Application.Run(mainForm);
             }
@@ -63,7 +55,7 @@ namespace ApiSAPBridge.Configuration
         {
             var services = new ServiceCollection();
 
-            // Configuración
+            // Configuración - USAR LA MISMA QUE EL PROYECTO PRINCIPAL
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -71,14 +63,15 @@ namespace ApiSAPBridge.Configuration
 
             services.AddSingleton<IConfiguration>(configuration);
 
-            // Base de datos
+            // USAR LA MISMA CONNECTION STRING DEL PROYECTO PRINCIPAL
             var connectionString = configuration.GetConnectionString("DefaultConnection")
-                ?? "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ApiSAPBridgeConfig;Integrated Security=True;";
+                ?? "Server=ORION-LUIS;Database=ApiSAP;User Id=ICGAdmin;Password=masterkey;MultipleActiveResultSets=true;TrustServerCertificate=true;ConnectRetryCount=0;";
 
-            services.AddDbContext<ConfigurationContext>(options =>
+            // USAR EL CONTEXTO EXISTENTE
+            services.AddDbContext<ApiSAPBridgeDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            // Servicios
+            // Servicios actualizados
             services.AddScoped<IConfigurationService, ConfigurationService>();
             services.AddScoped<IDatabaseTestService, DatabaseTestService>();
             services.AddScoped<ISecurityService, SecurityService>();
@@ -99,16 +92,17 @@ namespace ApiSAPBridge.Configuration
         private static async Task EnsureDatabaseCreatedAsync(IServiceProvider serviceProvider)
         {
             using var scope = serviceProvider.CreateScope();
-            var context = scope.ServiceProvider.GetRequiredService<ConfigurationContext>();
+            var context = scope.ServiceProvider.GetRequiredService<ApiSAPBridgeDbContext>();
 
             try
             {
+                // Aplicar migraciones automáticamente
                 await context.Database.MigrateAsync();
-                Log.Information("Base de datos configurada correctamente");
+                Log.Information("Migraciones aplicadas correctamente");
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "Error al configurar la base de datos");
+                Log.Error(ex, "Error al aplicar migraciones");
                 throw;
             }
         }

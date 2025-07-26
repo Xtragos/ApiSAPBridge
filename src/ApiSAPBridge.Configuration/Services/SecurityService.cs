@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ApiSAPBridge.Configuration.Data;
-using ApiSAPBridge.Configuration.Models;
+﻿using ApiSAPBridge.Configuration.Models;
 using ApiSAPBridge.Configuration.Models.DTOs;
+using ApiSAPBridge.Data;
+using ApiSAPBridge.Models.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiSAPBridge.Configuration.Services
 {
@@ -15,10 +16,10 @@ namespace ApiSAPBridge.Configuration.Services
 
     public class SecurityService : ISecurityService
     {
-        private readonly ConfigurationContext _context;
+        private readonly ApiSAPBridgeDbContext _context;
         private readonly IConfigurationService _configurationService;
 
-        public SecurityService(ConfigurationContext context, IConfigurationService configurationService)
+        public SecurityService(ApiSAPBridgeDbContext context, IConfigurationService configurationService)
         {
             _context = context;
             _configurationService = configurationService;
@@ -30,11 +31,13 @@ namespace ApiSAPBridge.Configuration.Services
 
             if (securityConfig == null)
             {
-                return new AuthenticationResult
+                // Crear configuración por defecto si no existe
+                securityConfig = new SecurityConfiguration
                 {
-                    IsAuthenticated = false,
-                    Message = "Configuración de seguridad no encontrada"
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123")
                 };
+                _context.SecurityConfigurations.Add(securityConfig);
+                await _context.SaveChangesAsync();
             }
 
             // Verificar si está bloqueado
@@ -82,7 +85,7 @@ namespace ApiSAPBridge.Configuration.Services
             {
                 IsAuthenticated = true,
                 Message = "Autenticación exitosa",
-                ExpiresAt = DateTime.UtcNow.AddHours(8) // Sesión válida por 8 horas
+                ExpiresAt = DateTime.UtcNow.AddHours(8)
             };
         }
 

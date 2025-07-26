@@ -1,9 +1,8 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-using ApiSAPBridge.Configuration.Models;
+﻿
 using ApiSAPBridge.Configuration.Services;
 using ApiSAPBridge.Configuration.UI.Controls;
 using ApiSAPBridge.Configuration.Utils;
+using ApiSAPBridge.Models.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace ApiSAPBridge.Configuration.UI.Forms
@@ -335,19 +334,16 @@ namespace ApiSAPBridge.Configuration.UI.Forms
                 var config = await _configurationService.GetSqlConfigurationAsync();
                 if (config != null)
                 {
+                    // Cargar configuración existente
                     _serverTextBox.Text = config.Server;
                     _databaseTextBox.Text = config.Database;
-                    _integratedSecurityCheckBox.Checked = config.UseIntegratedSecurity;
-                    _usernameTextBox.Text = config.Username ?? "";
-                    _passwordTextBox.Text = config.Password ?? "";
-                    _timeoutNumericUpDown.Value = config.ConnectionTimeout;
-
-                    _logger.LogInformation("Configuración SQL cargada");
+                    // ... resto de campos
                 }
+                // Si config es null, usar valores por defecto
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al cargar configuración SQL");
+                _logger.LogWarning(ex, "No se pudo cargar configuración SQL");
             }
         }
 

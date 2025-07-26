@@ -242,6 +242,246 @@ namespace ApiSAPBridge.Data.Migrations
                     b.ToTable("Clientes", (string)null);
                 });
 
+            modelBuilder.Entity("ApiSAPBridge.Models.Configuration.MethodConfiguration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Endpoint")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("HttpMethod")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("IsAutomaticSync")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastExecuted")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MethodName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int>("SyncIntervalMinutes")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MethodName", "HttpMethod")
+                        .IsUnique()
+                        .HasDatabaseName("IX_MethodConfigurations_MethodHttpMethod");
+
+                    b.ToTable("MethodConfigurations", (string)null);
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.Configuration.SecurityConfiguration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateTime?>("LastLogin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("LockedUntil")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LoginAttempts")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SecurityConfigurations", (string)null);
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.Configuration.SqlConfiguration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ConnectionTimeout")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Database")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Password")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Server")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("UseIntegratedSecurity")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Username")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Server", "Database")
+                        .IsUnique()
+                        .HasDatabaseName("IX_SqlConfigurations_ServerDatabase");
+
+                    b.ToTable("SqlConfigurations", (string)null);
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.Configuration.SwaggerConfiguration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Category")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Endpoint")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("HttpMethod")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("IsVisible")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MethodName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MethodName", "HttpMethod")
+                        .IsUnique()
+                        .HasDatabaseName("IX_SwaggerConfigurations_MethodHttpMethod");
+
+                    b.ToTable("SwaggerConfigurations", (string)null);
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.Configuration.SystemConfiguration", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Key")
+                        .IsUnique()
+                        .HasDatabaseName("IX_SystemConfigurations_Key");
+
+                    b.ToTable("SystemConfigurations", (string)null);
+                });
+
             modelBuilder.Entity("ApiSAPBridge.Models.Departamento", b =>
                 {
                     b.Property<int>("NUMDPTO")
@@ -318,6 +558,205 @@ namespace ApiSAPBridge.Data.Migrations
                     b.ToTable("ApiLogs", (string)null);
                 });
 
+            modelBuilder.Entity("ApiSAPBridge.Models.Factura", b =>
+                {
+                    b.Property<string>("NUMSERIE")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("NUMSERIE");
+
+                    b.Property<int>("NUMFACTURA")
+                        .HasColumnType("int")
+                        .HasColumnName("NUMFACTURA");
+
+                    b.Property<int>("N")
+                        .HasColumnType("int")
+                        .HasColumnName("N");
+
+                    b.Property<int>("CODCLIENTE")
+                        .HasColumnType("int")
+                        .HasColumnName("CODCLIENTE");
+
+                    b.Property<int>("CODVENDEDOR")
+                        .HasMaxLength(20)
+                        .HasColumnType("int")
+                        .HasColumnName("CODVENDEDOR");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FECHA")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("FECHA");
+
+                    b.Property<DateTime>("FECHACREADO")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("FECHACREADO");
+
+                    b.Property<DateTime>("FECHAMODIFICADO")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("FECHAMODIFICADO");
+
+                    b.Property<string>("TIPODOC")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)")
+                        .HasColumnName("TIPODOC");
+
+                    b.Property<decimal>("TOTALBRUTO")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("TOTALBRUTO");
+
+                    b.Property<decimal>("TOTALIMPUESTOS")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("TOTALIMPUESTOS");
+
+                    b.Property<decimal>("TOTALNETO")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("TOTALNETO");
+
+                    b.Property<decimal>("TOTDTOCOMERCIAL")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("TOTDTOCOMERCIAL");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("NUMSERIE", "NUMFACTURA", "N");
+
+                    b.HasIndex("CODCLIENTE");
+
+                    b.HasIndex("CODVENDEDOR");
+
+                    b.ToTable("FACTURAS");
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.FacturaDetalle", b =>
+                {
+                    b.Property<string>("SERIE")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("SERIE");
+
+                    b.Property<int>("NUMERO")
+                        .HasColumnType("int")
+                        .HasColumnName("NUMERO");
+
+                    b.Property<int>("N")
+                        .HasColumnType("int")
+                        .HasColumnName("N");
+
+                    b.Property<int>("LINEA")
+                        .HasColumnType("int")
+                        .HasColumnName("LINEA");
+
+                    b.Property<int>("CODARTICULO")
+                        .HasColumnType("int")
+                        .HasColumnName("CODARTICULO");
+
+                    b.Property<string>("COLOR")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("COLOR");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DESCRIPCION")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("DESCRIPCION");
+
+                    b.Property<decimal>("DTO")
+                        .HasColumnType("decimal(5,2)")
+                        .HasColumnName("DTO");
+
+                    b.Property<decimal>("PRECIO")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("PRECIO");
+
+                    b.Property<string>("REFERENCIA")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("REFERENCIA");
+
+                    b.Property<string>("TALLA")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)")
+                        .HasColumnName("TALLA");
+
+                    b.Property<int>("TIPOIMPUESTO")
+                        .HasColumnType("int")
+                        .HasColumnName("TIPOIMPUESTO");
+
+                    b.Property<decimal>("TOTAL")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("TOTAL");
+
+                    b.Property<decimal>("UNIDADESTOTAL")
+                        .HasColumnType("decimal(18,3)")
+                        .HasColumnName("UNIDADESTOTAL");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SERIE", "NUMERO", "N", "LINEA");
+
+                    b.HasIndex("CODARTICULO");
+
+                    b.HasIndex("TIPOIMPUESTO");
+
+                    b.ToTable("FACTURADETALLES");
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.FacturaPago", b =>
+                {
+                    b.Property<string>("SERIE")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("SERIE");
+
+                    b.Property<int>("NUMERO")
+                        .HasColumnType("int")
+                        .HasColumnName("NUMERO");
+
+                    b.Property<int>("N")
+                        .HasColumnType("int")
+                        .HasColumnName("N");
+
+                    b.Property<int>("POSICION")
+                        .HasColumnType("int")
+                        .HasColumnName("POSICION");
+
+                    b.Property<int>("CODTIPOPAGO")
+                        .HasColumnType("int")
+                        .HasColumnName("CODTIPOPAGO");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DESCRIPCION")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("DESCRIPCION");
+
+                    b.Property<decimal>("IMPORTE")
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("IMPORTE");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("SERIE", "NUMERO", "N", "POSICION");
+
+                    b.HasIndex("CODTIPOPAGO");
+
+                    b.ToTable("FACTURAPAGOS");
+                });
+
             modelBuilder.Entity("ApiSAPBridge.Models.Familia", b =>
                 {
                     b.Property<int>("NUMDPTO")
@@ -357,9 +796,12 @@ namespace ApiSAPBridge.Data.Migrations
 
             modelBuilder.Entity("ApiSAPBridge.Models.FormaPago", b =>
                 {
-                    b.Property<string>("CODFORMAPAGO")
+                    b.Property<int>("CODFORMAPAGO")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CODFORMAPAGO"));
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -592,6 +1034,71 @@ namespace ApiSAPBridge.Data.Migrations
                     b.Navigation("Articulo");
                 });
 
+            modelBuilder.Entity("ApiSAPBridge.Models.Factura", b =>
+                {
+                    b.HasOne("ApiSAPBridge.Models.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("CODCLIENTE")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiSAPBridge.Models.Vendedor", "Vendedor")
+                        .WithMany()
+                        .HasForeignKey("CODVENDEDOR")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Vendedor");
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.FacturaDetalle", b =>
+                {
+                    b.HasOne("ApiSAPBridge.Models.Articulo", "Articulo")
+                        .WithMany()
+                        .HasForeignKey("CODARTICULO")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiSAPBridge.Models.Impuesto", "Impuesto")
+                        .WithMany()
+                        .HasForeignKey("TIPOIMPUESTO")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiSAPBridge.Models.Factura", "Factura")
+                        .WithMany("Detalles")
+                        .HasForeignKey("SERIE", "NUMERO", "N")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Articulo");
+
+                    b.Navigation("Factura");
+
+                    b.Navigation("Impuesto");
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.FacturaPago", b =>
+                {
+                    b.HasOne("ApiSAPBridge.Models.FormaPago", "FormaPago")
+                        .WithMany()
+                        .HasForeignKey("CODTIPOPAGO")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApiSAPBridge.Models.Factura", "Factura")
+                        .WithMany("Pagos")
+                        .HasForeignKey("SERIE", "NUMERO", "N")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Factura");
+
+                    b.Navigation("FormaPago");
+                });
+
             modelBuilder.Entity("ApiSAPBridge.Models.Familia", b =>
                 {
                     b.HasOne("ApiSAPBridge.Models.Seccion", "Seccion")
@@ -645,6 +1152,13 @@ namespace ApiSAPBridge.Data.Migrations
                     b.Navigation("Articulos");
 
                     b.Navigation("Secciones");
+                });
+
+            modelBuilder.Entity("ApiSAPBridge.Models.Factura", b =>
+                {
+                    b.Navigation("Detalles");
+
+                    b.Navigation("Pagos");
                 });
 
             modelBuilder.Entity("ApiSAPBridge.Models.Impuesto", b =>

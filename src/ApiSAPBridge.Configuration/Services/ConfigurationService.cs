@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ApiSAPBridge.Configuration.Data;
-using ApiSAPBridge.Configuration.Models;
+﻿
 using ApiSAPBridge.Configuration.Models.DTOs;
+using ApiSAPBridge.Data;
+using ApiSAPBridge.Models.Configuration;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiSAPBridge.Configuration.Services
 {
@@ -19,16 +21,24 @@ namespace ApiSAPBridge.Configuration.Services
 
     public class ConfigurationService : IConfigurationService
     {
-        private readonly ConfigurationContext _context;
+        private readonly ApiSAPBridgeDbContext _context;
 
-        public ConfigurationService(ConfigurationContext context)
+        public ConfigurationService(ApiSAPBridgeDbContext context)
         {
             _context = context;
         }
 
         public async Task<SqlConfiguration?> GetSqlConfigurationAsync()
         {
-            return await _context.SqlConfigurations.FirstOrDefaultAsync();
+            try
+            {
+                return await _context.SqlConfigurations.FirstOrDefaultAsync();
+            }
+            catch (Microsoft.Data.SqlClient.SqlException ex) when (ex.Number == 208)
+            {
+                // Tabla no existe aún, retornar null
+                return null;
+            }
         }
 
         public async Task<OperationResult> SaveSqlConfigurationAsync(SqlConfiguration config)
