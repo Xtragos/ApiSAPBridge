@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.Services", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.Tests.Unit", "test\ApiSAPBridge.Tests.Unit\ApiSAPBridge.Tests.Unit.csproj", "{59994E28-1EBC-4A65-8727-795485F1B274}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSAPBridge.Configuration", "src\ApiSAPBridge.Configuration\ApiSAPBridge.Configuration.csproj", "{48D9E3F5-D5CE-4221-8D26-DA7516A23680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59994E28-1EBC-4A65-8727-795485F1B274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D9E3F5-D5CE-4221-8D26-DA7516A23680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D9E3F5-D5CE-4221-8D26-DA7516A23680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D9E3F5-D5CE-4221-8D26-DA7516A23680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D9E3F5-D5CE-4221-8D26-DA7516A23680}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{C540CD7B-1861-4F79-8931-E2B2B714BFB0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{0AEA8C51-8700-408C-B689-E09C7ED9E10C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{59994E28-1EBC-4A65-8727-795485F1B274} = {5A0E59DC-D1C5-4065-8809-1DD681EECAA0}
+		{48D9E3F5-D5CE-4221-8D26-DA7516A23680} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6276837A-7707-4533-9EB2-3EBE1137411E}

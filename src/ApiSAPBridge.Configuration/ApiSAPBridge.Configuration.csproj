@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<ApplicationIcon>Resources\app.ico</ApplicationIcon>
+		<AssemblyTitle>ApiSAPBridge Configuration Manager</AssemblyTitle>
+		<AssemblyDescription>Herramienta de configuración visual para ApiSAPBridge</AssemblyDescription>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<!-- Tratar advertencias de degradación como errores -->
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<WarningsAsErrors />
+		<WarningsNotAsErrors>NU1605</WarningsNotAsErrors>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<!-- Paquetes Microsoft.Extensions - Versiones consistentes para .NET 8 -->
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+
+		<!-- Entity Framework Core - Versión 8.0 para .NET 8 -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
+		<!-- Validación -->
+		<PackageReference Include="FluentValidation" Version="11.8.1" />
+
+		<!-- Seguridad -->
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+
+		<!-- Logging - Versiones compatibles con .NET 8 -->
+		<PackageReference Include="Serilog" Version="3.1.1" />
+		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+
+		<!-- JSON -->
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+		<!-- SQL Client -->
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Resources\" />
+		<Folder Include="UI\Controls\" />
+		<Folder Include="Models\" />
+		<Folder Include="Services\" />
+		<Folder Include="Data\" />
+		<Folder Include="Utils\" />
+	</ItemGroup>
+
+</Project>

@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\data\\configurationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\data\\configurationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\ui\\controls\\moderntabcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\ui\\controls\\moderntabcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConfigurationContext.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Data\\ConfigurationContext.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\Data\\ConfigurationContext.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Data\\ConfigurationContext.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Data\\ConfigurationContext.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T01:28:42.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModernTabControl.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\UI\\Controls\\ModernTabControl.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\UI\\Controls\\ModernTabControl.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\UI\\Controls\\ModernTabControl.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\UI\\Controls\\ModernTabControl.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAnwFwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T01:17:29.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\Program.cs",
+              "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Program.cs",
+              "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T01:16:24.432Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
