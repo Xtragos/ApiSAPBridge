@@ -163,7 +163,6 @@ C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAP
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBr.449E5E01.Up2Date
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\ApiSAPBridge.API.dll
 C:\Desarrollo\Visual Studio\Visual Studio 2022\Proyectos\ApiSAPBridge\src\ApiSAPBridge.API\obj\Debug\net8.0\refint\ApiSAPBridge.API.dll

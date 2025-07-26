@@ -60,3 +60,399 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): El nombre de objeto 'SqlConf
 ClientConnectionId:155cf921-7c64-4748-82f3-1a265eadcc47
 Error Number:208,State:1,Class:16
 2025-07-25 22:07:59.965 -05:00 [INF] Formularios cargados correctamente
+2025-07-25 22:28:43.283 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:28:43.394 -05:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:28:43.401 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:28:43.405 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:28:43.421 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-25 22:28:43.458 -05:00 [INF] Applying migration '20250726031259_InitialCreateWithConfiguration'.
+2025-07-25 22:28:43.765 -05:00 [INF] Executed DbCommand (243ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApiLogs] (
+    [Id] int NOT NULL IDENTITY,
+    [Timestamp] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [Level] nvarchar(50) NULL,
+    [Message] nvarchar(max) NULL,
+    [Exception] nvarchar(max) NULL,
+    [Properties] nvarchar(max) NULL,
+    [EndpointCalled] nvarchar(255) NULL,
+    [HttpMethod] nvarchar(10) NULL,
+    [RequestBody] nvarchar(max) NULL,
+    [ResponseStatus] int NULL,
+    CONSTRAINT [PK_ApiLogs] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:43.815 -05:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Clientes] (
+    [CODCLIENTE] int NOT NULL IDENTITY,
+    [CODCONTABLE] nvarchar(50) NULL,
+    [NOMBRECLIENTE] nvarchar(255) NOT NULL,
+    [NOMBRECOMERCIAL] nvarchar(255) NULL,
+    [CIF] nvarchar(50) NULL,
+    [ALIAS] nvarchar(255) NULL,
+    [DIRECCION1] nvarchar(500) NULL,
+    [POBLACION] nvarchar(255) NULL,
+    [PROVINCIA] nvarchar(255) NULL,
+    [PAIS] nvarchar(255) NULL,
+    [TELEFONO1] nvarchar(50) NULL,
+    [TELEFONO2] nvarchar(50) NULL,
+    [E_MAIL] nvarchar(255) NULL,
+    [RIESGOCONCEDIDO] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [FACTURARCONIMPUESTO] nvarchar(10) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Clientes] PRIMARY KEY ([CODCLIENTE])
+);
+2025-07-25 22:28:43.879 -05:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Departamentos] (
+    [NUMDPTO] int NOT NULL IDENTITY,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Departamentos] PRIMARY KEY ([NUMDPTO])
+);
+2025-07-25 22:28:43.936 -05:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FormasPago] (
+    [CODFORMAPAGO] int NOT NULL IDENTITY,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [NUMVENCIMIENTOS] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_FormasPago] PRIMARY KEY ([CODFORMAPAGO])
+);
+2025-07-25 22:28:43.944 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Impuestos] (
+    [TIPOIVA] int NOT NULL IDENTITY,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [IVA] decimal(5,2) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Impuestos] PRIMARY KEY ([TIPOIVA])
+);
+2025-07-25 22:28:43.955 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [MethodConfigurations] (
+    [Id] int NOT NULL IDENTITY,
+    [MethodName] nvarchar(255) NOT NULL,
+    [HttpMethod] nvarchar(10) NOT NULL,
+    [Endpoint] nvarchar(500) NOT NULL,
+    [IsEnabled] bit NOT NULL,
+    [IsAutomaticSync] bit NOT NULL,
+    [SyncIntervalMinutes] int NOT NULL,
+    [Description] nvarchar(1000) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [LastExecuted] datetime2 NULL,
+    CONSTRAINT [PK_MethodConfigurations] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:43.982 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SecurityConfigurations] (
+    [Id] int NOT NULL IDENTITY,
+    [PasswordHash] nvarchar(500) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [LastLogin] datetime2 NULL,
+    [LoginAttempts] int NOT NULL,
+    [LockedUntil] datetime2 NULL,
+    CONSTRAINT [PK_SecurityConfigurations] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:44.066 -05:00 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SqlConfigurations] (
+    [Id] int NOT NULL IDENTITY,
+    [Server] nvarchar(255) NOT NULL,
+    [Database] nvarchar(255) NOT NULL,
+    [Username] nvarchar(255) NULL,
+    [Password] nvarchar(500) NULL,
+    [UseIntegratedSecurity] bit NOT NULL,
+    [ConnectionTimeout] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_SqlConfigurations] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:44.103 -05:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SwaggerConfigurations] (
+    [Id] int NOT NULL IDENTITY,
+    [MethodName] nvarchar(255) NOT NULL,
+    [HttpMethod] nvarchar(10) NOT NULL,
+    [Endpoint] nvarchar(500) NOT NULL,
+    [IsVisible] bit NOT NULL,
+    [Category] nvarchar(100) NULL,
+    [Description] nvarchar(1000) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_SwaggerConfigurations] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:44.118 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SystemConfigurations] (
+    [Id] int NOT NULL IDENTITY,
+    [Key] nvarchar(255) NOT NULL,
+    [Value] nvarchar(2000) NOT NULL,
+    [Description] nvarchar(1000) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_SystemConfigurations] PRIMARY KEY ([Id])
+);
+2025-07-25 22:28:44.170 -05:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Tarifas] (
+    [IDTARIFAV] int NOT NULL IDENTITY,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [FECHAINI] date NOT NULL,
+    [FECHAFIN] date NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Tarifas] PRIMARY KEY ([IDTARIFAV])
+);
+2025-07-25 22:28:44.178 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Vendedores] (
+    [CODVENDEDOR] int NOT NULL IDENTITY,
+    [NOMBRE] nvarchar(255) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Vendedores] PRIMARY KEY ([CODVENDEDOR])
+);
+2025-07-25 22:28:44.233 -05:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Secciones] (
+    [NUMDPTO] int NOT NULL,
+    [NUMSECCION] int NOT NULL,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Secciones] PRIMARY KEY ([NUMDPTO], [NUMSECCION]),
+    CONSTRAINT [FK_Secciones_Departamentos_NUMDPTO] FOREIGN KEY ([NUMDPTO]) REFERENCES [Departamentos] ([NUMDPTO]) ON DELETE NO ACTION
+);
+2025-07-25 22:28:44.311 -05:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Articulos] (
+    [CODARTICULO] int NOT NULL IDENTITY,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [DESCRIPADIC] nvarchar(500) NULL,
+    [TIPOIMPUESTO] int NOT NULL,
+    [DPTO] int NULL,
+    [SECCION] int NULL,
+    [FAMILIA] int NULL,
+    [UNID1C] decimal(18,2) NULL,
+    [UNID1V] decimal(18,2) NULL,
+    [REFPROVEEDOR] nvarchar(100) NULL,
+    [USASTOCKS] nvarchar(1) NULL,
+    [IMPUESTOCOMPRA] int NULL,
+    [DESCATALOGADO] nvarchar(1) NULL,
+    [UDSTRASPASO] decimal(18,2) NULL,
+    [TIPOARTICULO] nvarchar(1) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Articulos] PRIMARY KEY ([CODARTICULO]),
+    CONSTRAINT [FK_Articulos_Departamentos_DPTO] FOREIGN KEY ([DPTO]) REFERENCES [Departamentos] ([NUMDPTO]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_Articulos_Impuestos_TIPOIMPUESTO] FOREIGN KEY ([TIPOIMPUESTO]) REFERENCES [Impuestos] ([TIPOIVA]) ON DELETE NO ACTION
+);
+2025-07-25 22:28:44.338 -05:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FACTURAS] (
+    [NUMSERIE] nvarchar(50) NOT NULL,
+    [NUMFACTURA] int NOT NULL,
+    [N] int NOT NULL,
+    [FECHA] datetime2 NOT NULL,
+    [CODCLIENTE] int NOT NULL,
+    [CODVENDEDOR] int NOT NULL,
+    [TOTALBRUTO] decimal(18,2) NOT NULL,
+    [TOTALIMPUESTOS] decimal(18,2) NOT NULL,
+    [TOTDTOCOMERCIAL] decimal(18,2) NOT NULL,
+    [TOTALNETO] decimal(18,2) NOT NULL,
+    [TIPODOC] nvarchar(20) NOT NULL,
+    [FECHACREADO] datetime2 NOT NULL,
+    [FECHAMODIFICADO] datetime2 NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_FACTURAS] PRIMARY KEY ([NUMSERIE], [NUMFACTURA], [N]),
+    CONSTRAINT [FK_FACTURAS_Clientes_CODCLIENTE] FOREIGN KEY ([CODCLIENTE]) REFERENCES [Clientes] ([CODCLIENTE]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FACTURAS_Vendedores_CODVENDEDOR] FOREIGN KEY ([CODVENDEDOR]) REFERENCES [Vendedores] ([CODVENDEDOR]) ON DELETE CASCADE
+);
+2025-07-25 22:28:44.404 -05:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Familias] (
+    [NUMDPTO] int NOT NULL,
+    [NUMSECCION] int NOT NULL,
+    [NUMFAMILIA] int NOT NULL,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Familias] PRIMARY KEY ([NUMDPTO], [NUMSECCION], [NUMFAMILIA]),
+    CONSTRAINT [FK_Familias_Secciones_NUMDPTO_NUMSECCION] FOREIGN KEY ([NUMDPTO], [NUMSECCION]) REFERENCES [Secciones] ([NUMDPTO], [NUMSECCION]) ON DELETE NO ACTION
+);
+2025-07-25 22:28:44.414 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ArticuloLineas] (
+    [CODARTICULO] int NOT NULL,
+    [TALLA] nvarchar(10) NOT NULL,
+    [COLOR] nvarchar(50) NOT NULL,
+    [CODBARRAS] nvarchar(50) NULL,
+    [COSTEMEDIO] decimal(18,2) NULL,
+    [COSTESTOCK] decimal(18,2) NULL,
+    [ULTIMOCOSTE] decimal(18,2) NULL,
+    [CODBARRAS2] nvarchar(50) NULL,
+    [CODBARRAS3] nvarchar(50) NULL,
+    [DESCATALOGADO] nvarchar(1) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_ArticuloLineas] PRIMARY KEY ([CODARTICULO], [TALLA], [COLOR]),
+    CONSTRAINT [FK_ArticuloLineas_Articulos_CODARTICULO] FOREIGN KEY ([CODARTICULO]) REFERENCES [Articulos] ([CODARTICULO]) ON DELETE CASCADE
+);
+2025-07-25 22:28:44.449 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Precios] (
+    [IDTARIFAV] int NOT NULL,
+    [CODARTICULO] int NOT NULL,
+    [TALLA] nvarchar(10) NOT NULL,
+    [COLOR] nvarchar(50) NOT NULL,
+    [CODBARRAS] nvarchar(50) NULL,
+    [PBRUTO] decimal(18,2) NOT NULL,
+    [DTO] decimal(5,2) NOT NULL,
+    [PNETO] decimal(18,2) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    [UpdatedAt] datetime2 NOT NULL DEFAULT (GETDATE()),
+    CONSTRAINT [PK_Precios] PRIMARY KEY ([IDTARIFAV], [CODARTICULO], [TALLA], [COLOR]),
+    CONSTRAINT [FK_Precios_Articulos_CODARTICULO] FOREIGN KEY ([CODARTICULO]) REFERENCES [Articulos] ([CODARTICULO]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Precios_Tarifas_IDTARIFAV] FOREIGN KEY ([IDTARIFAV]) REFERENCES [Tarifas] ([IDTARIFAV]) ON DELETE CASCADE
+);
+2025-07-25 22:28:44.533 -05:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FACTURADETALLES] (
+    [SERIE] nvarchar(50) NOT NULL,
+    [NUMERO] int NOT NULL,
+    [N] int NOT NULL,
+    [LINEA] int NOT NULL,
+    [CODARTICULO] int NOT NULL,
+    [REFERENCIA] nvarchar(100) NULL,
+    [DESCRIPCION] nvarchar(255) NOT NULL,
+    [TALLA] nvarchar(10) NOT NULL,
+    [COLOR] nvarchar(50) NOT NULL,
+    [TIPOIMPUESTO] int NOT NULL,
+    [UNIDADESTOTAL] decimal(18,3) NOT NULL,
+    [PRECIO] decimal(18,2) NOT NULL,
+    [DTO] decimal(5,2) NOT NULL,
+    [TOTAL] decimal(18,2) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_FACTURADETALLES] PRIMARY KEY ([SERIE], [NUMERO], [N], [LINEA]),
+    CONSTRAINT [FK_FACTURADETALLES_Articulos_CODARTICULO] FOREIGN KEY ([CODARTICULO]) REFERENCES [Articulos] ([CODARTICULO]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FACTURADETALLES_FACTURAS_SERIE_NUMERO_N] FOREIGN KEY ([SERIE], [NUMERO], [N]) REFERENCES [FACTURAS] ([NUMSERIE], [NUMFACTURA], [N]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FACTURADETALLES_Impuestos_TIPOIMPUESTO] FOREIGN KEY ([TIPOIMPUESTO]) REFERENCES [Impuestos] ([TIPOIVA]) ON DELETE CASCADE
+);
+2025-07-25 22:28:44.568 -05:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FACTURAPAGOS] (
+    [SERIE] nvarchar(50) NOT NULL,
+    [NUMERO] int NOT NULL,
+    [N] int NOT NULL,
+    [POSICION] int NOT NULL,
+    [CODTIPOPAGO] int NOT NULL,
+    [IMPORTE] decimal(18,2) NOT NULL,
+    [DESCRIPCION] nvarchar(100) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_FACTURAPAGOS] PRIMARY KEY ([SERIE], [NUMERO], [N], [POSICION]),
+    CONSTRAINT [FK_FACTURAPAGOS_FACTURAS_SERIE_NUMERO_N] FOREIGN KEY ([SERIE], [NUMERO], [N]) REFERENCES [FACTURAS] ([NUMSERIE], [NUMFACTURA], [N]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FACTURAPAGOS_FormasPago_CODTIPOPAGO] FOREIGN KEY ([CODTIPOPAGO]) REFERENCES [FormasPago] ([CODFORMAPAGO]) ON DELETE CASCADE
+);
+2025-07-25 22:28:44.578 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ApiLogs_Timestamp] ON [ApiLogs] ([Timestamp]);
+2025-07-25 22:28:44.597 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ArticuloLineas_CodigoBarras] ON [ArticuloLineas] ([CODBARRAS]);
+2025-07-25 22:28:44.603 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Articulos_Departamento] ON [Articulos] ([DPTO], [SECCION], [FAMILIA]);
+2025-07-25 22:28:44.608 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Articulos_TIPOIMPUESTO] ON [Articulos] ([TIPOIMPUESTO]);
+2025-07-25 22:28:44.612 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Clientes_Email] ON [Clientes] ([E_MAIL]);
+2025-07-25 22:28:44.617 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FACTURADETALLES_CODARTICULO] ON [FACTURADETALLES] ([CODARTICULO]);
+2025-07-25 22:28:44.648 -05:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FACTURADETALLES_TIPOIMPUESTO] ON [FACTURADETALLES] ([TIPOIMPUESTO]);
+2025-07-25 22:28:44.654 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FACTURAPAGOS_CODTIPOPAGO] ON [FACTURAPAGOS] ([CODTIPOPAGO]);
+2025-07-25 22:28:44.660 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FACTURAS_CODCLIENTE] ON [FACTURAS] ([CODCLIENTE]);
+2025-07-25 22:28:44.666 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FACTURAS_CODVENDEDOR] ON [FACTURAS] ([CODVENDEDOR]);
+2025-07-25 22:28:44.672 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Familias_Seccion] ON [Familias] ([NUMDPTO], [NUMSECCION]);
+2025-07-25 22:28:44.678 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_MethodConfigurations_MethodHttpMethod] ON [MethodConfigurations] ([MethodName], [HttpMethod]);
+2025-07-25 22:28:44.682 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Precios_CODARTICULO] ON [Precios] ([CODARTICULO]);
+2025-07-25 22:28:44.698 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Precios_Tarifa] ON [Precios] ([IDTARIFAV]);
+2025-07-25 22:28:44.704 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Secciones_NUMDPTO] ON [Secciones] ([NUMDPTO]);
+2025-07-25 22:28:44.708 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_SqlConfigurations_ServerDatabase] ON [SqlConfigurations] ([Server], [Database]);
+2025-07-25 22:28:44.711 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_SwaggerConfigurations_MethodHttpMethod] ON [SwaggerConfigurations] ([MethodName], [HttpMethod]);
+2025-07-25 22:28:44.715 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_SystemConfigurations_Key] ON [SystemConfigurations] ([Key]);
+2025-07-25 22:28:44.748 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250726031259_InitialCreateWithConfiguration', N'8.0.13');
+2025-07-25 22:28:44.762 -05:00 [INF] Migraciones aplicadas correctamente
+2025-07-25 22:28:45.153 -05:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2025-07-25 22:28:45.355 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[ConnectionTimeout], [s].[CreatedAt], [s].[Database], [s].[Password], [s].[Server], [s].[UpdatedAt], [s].[UseIntegratedSecurity], [s].[Username]
+FROM [SqlConfigurations] AS [s]
+2025-07-25 22:28:45.414 -05:00 [INF] Formulario principal inicializado
+2025-07-25 22:28:45.497 -05:00 [INF] Formularios cargados correctamente
+2025-07-25 22:31:19.511 -05:00 [INF] Test de conexión: false
+2025-07-25 22:31:21.009 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[ConnectionTimeout], [s].[CreatedAt], [s].[Database], [s].[Password], [s].[Server], [s].[UpdatedAt], [s].[UseIntegratedSecurity], [s].[Username]
+FROM [SqlConfigurations] AS [s]
+2025-07-25 22:31:21.404 -05:00 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 255), @p3='?' (Size = 500), @p4='?' (Size = 255), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [SqlConfigurations] ([ConnectionTimeout], [CreatedAt], [Database], [Password], [Server], [UpdatedAt], [UseIntegratedSecurity], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-07-25 22:31:24.401 -05:00 [INF] Configuración SQL guardada
+2025-07-25 22:31:26.523 -05:00 [INF] Test de conexión: false
+2025-07-25 22:31:30.187 -05:00 [INF] Cerrando aplicación
+2025-07-25 22:32:01.816 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:32:01.869 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:32:01.876 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:32:01.881 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:32:01.897 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-25 22:32:01.917 -05:00 [INF] No migrations were applied. The database is already up to date.
+2025-07-25 22:32:01.918 -05:00 [INF] Migraciones aplicadas correctamente
+2025-07-25 22:32:02.052 -05:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2025-07-25 22:32:02.118 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[ConnectionTimeout], [s].[CreatedAt], [s].[Database], [s].[Password], [s].[Server], [s].[UpdatedAt], [s].[UseIntegratedSecurity], [s].[Username]
+FROM [SqlConfigurations] AS [s]
+2025-07-25 22:32:02.136 -05:00 [INF] Formulario principal inicializado
+2025-07-25 22:32:02.171 -05:00 [INF] Formularios cargados correctamente
+2025-07-25 22:32:17.558 -05:00 [INF] Test de conexión: false
+2025-07-25 22:32:22.565 -05:00 [INF] Cerrando aplicación
+2025-07-25 22:32:37.793 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:32:37.847 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:32:37.853 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-07-25 22:32:37.860 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-07-25 22:32:37.875 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-07-25 22:32:37.892 -05:00 [INF] Applying migration '20250726033224_AddConfigurationTables'.
+2025-07-25 22:32:37.932 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250726033224_AddConfigurationTables', N'8.0.13');
+2025-07-25 22:32:37.947 -05:00 [INF] Migraciones aplicadas correctamente
+2025-07-25 22:32:38.077 -05:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2025-07-25 22:32:38.148 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[ConnectionTimeout], [s].[CreatedAt], [s].[Database], [s].[Password], [s].[Server], [s].[UpdatedAt], [s].[UseIntegratedSecurity], [s].[Username]
+FROM [SqlConfigurations] AS [s]
+2025-07-25 22:32:38.166 -05:00 [INF] Formulario principal inicializado
+2025-07-25 22:32:38.198 -05:00 [INF] Formularios cargados correctamente
+2025-07-25 22:32:53.174 -05:00 [INF] Test de conexión: false
+2025-07-25 22:32:57.709 -05:00 [INF] Cerrando aplicación

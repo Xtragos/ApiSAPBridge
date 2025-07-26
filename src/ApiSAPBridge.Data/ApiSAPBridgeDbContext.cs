@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// ApiSAPBridgeDbContext.cs - Configuraciones corregidas
+
+using Microsoft.EntityFrameworkCore;
 using ApiSAPBridge.Models;
 using ApiSAPBridge.Models.Entities;
 using ApiSAPBridge.Models.Configuration;
@@ -37,7 +39,7 @@ namespace ApiSAPBridge.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configurar entidades
+            // Configurar entidades principales
             ConfigureDepartamento(modelBuilder);
             ConfigureSeccion(modelBuilder);
             ConfigureFamilia(modelBuilder);
@@ -50,36 +52,21 @@ namespace ApiSAPBridge.Data
             ConfigureArticuloLinea(modelBuilder);
             ConfigurePrecio(modelBuilder);
             ConfigureApiLog(modelBuilder);
+
             // Configuraciones de Facturación
-            modelBuilder.Entity<Factura>()
-                .HasKey(f => new { f.NUMSERIE, f.NUMFACTURA, f.N });
+            ConfigureFactura(modelBuilder);
+            ConfigureFacturaDetalle(modelBuilder);
+            ConfigureFacturaPago(modelBuilder);
 
-            modelBuilder.Entity<FacturaDetalle>()
-                .HasKey(fd => new { fd.SERIE, fd.NUMERO, fd.N, fd.LINEA });
-
-            modelBuilder.Entity<FacturaPago>()
-                .HasKey(fp => new { fp.SERIE, fp.NUMERO, fp.N, fp.POSICION });
-
-            // Relaciones
-            modelBuilder.Entity<FacturaDetalle>()
-                .HasOne(fd => fd.Factura)
-                .WithMany(f => f.Detalles)
-                .HasForeignKey(fd => new { fd.SERIE, fd.NUMERO, fd.N });
-
-            modelBuilder.Entity<FacturaPago>()
-                .HasOne(fp => fp.Factura)
-                .WithMany(f => f.Pagos)
-                .HasForeignKey(fp => new { fp.SERIE, fp.NUMERO, fp.N });
-
-            // Configurar índices para optimización
-            ConfigureIndexes(modelBuilder);
-
+            // Configuraciones de Configuration
             ConfigureSqlConfiguration(modelBuilder);
             ConfigureMethodConfiguration(modelBuilder);
             ConfigureSwaggerConfiguration(modelBuilder);
             ConfigureSystemConfiguration(modelBuilder);
             ConfigureSecurityConfiguration(modelBuilder);
 
+            // Configurar índices para optimización
+            ConfigureIndexes(modelBuilder);
         }
 
         private void ConfigureDepartamento(ModelBuilder modelBuilder)
@@ -88,6 +75,9 @@ namespace ApiSAPBridge.Data
             {
                 entity.ToTable("Departamentos");
                 entity.HasKey(e => e.NUMDPTO);
+
+                entity.Property(e => e.NUMDPTO)
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
@@ -106,9 +96,13 @@ namespace ApiSAPBridge.Data
             modelBuilder.Entity<Seccion>(entity =>
             {
                 entity.ToTable("Secciones");
-
-                // Llave compuesta
                 entity.HasKey(e => new { e.NUMDPTO, e.NUMSECCION });
+
+                entity.Property(e => e.NUMDPTO)
+                    .HasColumnOrder(0);
+
+                entity.Property(e => e.NUMSECCION)
+                    .HasColumnOrder(1);
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
@@ -133,9 +127,16 @@ namespace ApiSAPBridge.Data
             modelBuilder.Entity<Familia>(entity =>
             {
                 entity.ToTable("Familias");
-
-                // Llave compuesta
                 entity.HasKey(e => new { e.NUMDPTO, e.NUMSECCION, e.NUMFAMILIA });
+
+                entity.Property(e => e.NUMDPTO)
+                    .HasColumnOrder(0);
+
+                entity.Property(e => e.NUMSECCION)
+                    .HasColumnOrder(1);
+
+                entity.Property(e => e.NUMFAMILIA)
+                    .HasColumnOrder(2);
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
@@ -162,6 +163,9 @@ namespace ApiSAPBridge.Data
                 entity.ToTable("Vendedores");
                 entity.HasKey(e => e.CODVENDEDOR);
 
+                entity.Property(e => e.CODVENDEDOR)
+                    .ValueGeneratedOnAdd();
+
                 entity.Property(e => e.NOMBRE)
                     .IsRequired()
                     .HasMaxLength(255);
@@ -180,6 +184,9 @@ namespace ApiSAPBridge.Data
             {
                 entity.ToTable("Impuestos");
                 entity.HasKey(e => e.TIPOIVA);
+
+                entity.Property(e => e.TIPOIVA)
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
@@ -203,12 +210,16 @@ namespace ApiSAPBridge.Data
                 entity.ToTable("FormasPago");
                 entity.HasKey(e => e.CODFORMAPAGO);
 
+                // ❌ PROBLEMA PRINCIPAL: Quitamos HasMaxLength en un int IDENTITY
                 entity.Property(e => e.CODFORMAPAGO)
-                    .HasMaxLength(10);
+                    .ValueGeneratedOnAdd(); // Explícitamente IDENTITY
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
                     .HasMaxLength(255);
+
+                entity.Property(e => e.NUMVENCIMIENTOS)
+                    .IsRequired();
 
                 entity.Property(e => e.CreatedAt)
                     .HasDefaultValueSql("GETDATE()");
@@ -224,6 +235,9 @@ namespace ApiSAPBridge.Data
             {
                 entity.ToTable("Clientes");
                 entity.HasKey(e => e.CODCLIENTE);
+
+                entity.Property(e => e.CODCLIENTE)
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.CODCONTABLE)
                     .HasMaxLength(50);
@@ -284,6 +298,9 @@ namespace ApiSAPBridge.Data
                 entity.ToTable("Tarifas");
                 entity.HasKey(e => e.IDTARIFAV);
 
+                entity.Property(e => e.IDTARIFAV)
+                    .ValueGeneratedOnAdd();
+
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
                     .HasMaxLength(255);
@@ -308,6 +325,9 @@ namespace ApiSAPBridge.Data
             {
                 entity.ToTable("Articulos");
                 entity.HasKey(e => e.CODARTICULO);
+
+                entity.Property(e => e.CODARTICULO)
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.DESCRIPCION)
                     .IsRequired()
@@ -361,15 +381,18 @@ namespace ApiSAPBridge.Data
             modelBuilder.Entity<ArticuloLinea>(entity =>
             {
                 entity.ToTable("ArticuloLineas");
-
-                // Llave compuesta
                 entity.HasKey(e => new { e.CODARTICULO, e.TALLA, e.COLOR });
 
+                entity.Property(e => e.CODARTICULO)
+                    .HasColumnOrder(0);
+
                 entity.Property(e => e.TALLA)
-                    .HasMaxLength(10);
+                    .HasMaxLength(10)
+                    .HasColumnOrder(1);
 
                 entity.Property(e => e.COLOR)
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnOrder(2);
 
                 entity.Property(e => e.CODBARRAS)
                     .HasMaxLength(50);
@@ -411,15 +434,21 @@ namespace ApiSAPBridge.Data
             modelBuilder.Entity<Precio>(entity =>
             {
                 entity.ToTable("Precios");
-
-                // Llave compuesta
                 entity.HasKey(e => new { e.IDTARIFAV, e.CODARTICULO, e.TALLA, e.COLOR });
 
+                entity.Property(e => e.IDTARIFAV)
+                    .HasColumnOrder(0);
+
+                entity.Property(e => e.CODARTICULO)
+                    .HasColumnOrder(1);
+
                 entity.Property(e => e.TALLA)
-                    .HasMaxLength(10);
+                    .HasMaxLength(10)
+                    .HasColumnOrder(2);
 
                 entity.Property(e => e.COLOR)
-                    .HasMaxLength(50);
+                    .HasMaxLength(50)
+                    .HasColumnOrder(3);
 
                 entity.Property(e => e.CODBARRAS)
                     .HasMaxLength(50);
@@ -473,6 +502,391 @@ namespace ApiSAPBridge.Data
 
                 entity.Property(e => e.HttpMethod)
                     .HasMaxLength(10);
+            });
+        }
+
+        private void ConfigureFactura(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Factura>(entity =>
+            {
+                entity.ToTable("FACTURAS");
+                entity.HasKey(f => new { f.NUMSERIE, f.NUMFACTURA, f.N });
+
+                entity.Property(f => f.NUMSERIE)
+                    .HasMaxLength(50)
+                    .HasColumnName("NUMSERIE");
+
+                entity.Property(f => f.NUMFACTURA)
+                    .HasColumnName("NUMFACTURA");
+
+                entity.Property(f => f.N)
+                    .HasColumnName("N");
+
+                entity.Property(f => f.FECHA)
+                    .HasColumnName("FECHA");
+
+                entity.Property(f => f.CODCLIENTE)
+                    .HasColumnName("CODCLIENTE");
+
+                entity.Property(f => f.CODVENDEDOR)
+                    .HasMaxLength(20)
+                    .HasColumnName("CODVENDEDOR");
+
+                entity.Property(f => f.TOTALBRUTO)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("TOTALBRUTO");
+
+                entity.Property(f => f.TOTALIMPUESTOS)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("TOTALIMPUESTOS");
+
+                entity.Property(f => f.TOTDTOCOMERCIAL)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("TOTDTOCOMERCIAL");
+
+                entity.Property(f => f.TOTALNETO)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("TOTALNETO");
+
+                entity.Property(f => f.TIPODOC)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .HasColumnName("TIPODOC");
+
+                entity.Property(f => f.FECHACREADO)
+                    .HasColumnName("FECHACREADO");
+
+                entity.Property(f => f.FECHAMODIFICADO)
+                    .HasColumnName("FECHAMODIFICADO");
+
+                // Relaciones
+                entity.HasOne(f => f.Cliente)
+                    .WithMany()
+                    .HasForeignKey(f => f.CODCLIENTE)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(f => f.Vendedor)
+                    .WithMany()
+                    .HasForeignKey(f => f.CODVENDEDOR)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+        }
+
+        private void ConfigureFacturaDetalle(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FacturaDetalle>(entity =>
+            {
+                entity.ToTable("FACTURADETALLES");
+                entity.HasKey(fd => new { fd.SERIE, fd.NUMERO, fd.N, fd.LINEA });
+
+                entity.Property(fd => fd.SERIE)
+                    .HasMaxLength(50)
+                    .HasColumnName("SERIE");
+
+                entity.Property(fd => fd.NUMERO)
+                    .HasColumnName("NUMERO");
+
+                entity.Property(fd => fd.N)
+                    .HasColumnName("N");
+
+                entity.Property(fd => fd.LINEA)
+                    .HasColumnName("LINEA");
+
+                entity.Property(fd => fd.CODARTICULO)
+                    .HasColumnName("CODARTICULO");
+
+                entity.Property(fd => fd.REFERENCIA)
+                    .HasMaxLength(100)
+                    .HasColumnName("REFERENCIA");
+
+                entity.Property(fd => fd.DESCRIPCION)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .HasColumnName("DESCRIPCION");
+
+                entity.Property(fd => fd.TALLA)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .HasColumnName("TALLA");
+
+                entity.Property(fd => fd.COLOR)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("COLOR");
+
+                entity.Property(fd => fd.TIPOIMPUESTO)
+                    .HasColumnName("TIPOIMPUESTO");
+
+                entity.Property(fd => fd.UNIDADESTOTAL)
+                    .HasColumnType("decimal(18,3)")
+                    .HasColumnName("UNIDADESTOTAL");
+
+                entity.Property(fd => fd.PRECIO)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("PRECIO");
+
+                entity.Property(fd => fd.DTO)
+                    .HasColumnType("decimal(5,2)")
+                    .HasColumnName("DTO");
+
+                entity.Property(fd => fd.TOTAL)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("TOTAL");
+
+                // Relaciones
+                entity.HasOne(fd => fd.Factura)
+                    .WithMany(f => f.Detalles)
+                    .HasForeignKey(fd => new { fd.SERIE, fd.NUMERO, fd.N })
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(fd => fd.Articulo)
+                    .WithMany()
+                    .HasForeignKey(fd => fd.CODARTICULO)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(fd => fd.Impuesto)
+                    .WithMany()
+                    .HasForeignKey(fd => fd.TIPOIMPUESTO)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+        }
+
+        private void ConfigureFacturaPago(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FacturaPago>(entity =>
+            {
+                entity.ToTable("FACTURAPAGOS");
+                entity.HasKey(fp => new { fp.SERIE, fp.NUMERO, fp.N, fp.POSICION });
+
+                entity.Property(fp => fp.SERIE)
+                    .HasMaxLength(50)
+                    .HasColumnName("SERIE");
+
+                entity.Property(fp => fp.NUMERO)
+                    .HasColumnName("NUMERO");
+
+                entity.Property(fp => fp.N)
+                    .HasColumnName("N");
+
+                entity.Property(fp => fp.POSICION)
+                    .HasColumnName("POSICION");
+
+                entity.Property(fp => fp.CODTIPOPAGO)
+                    .HasColumnName("CODTIPOPAGO");
+
+                entity.Property(fp => fp.IMPORTE)
+                    .HasColumnType("decimal(18,2)")
+                    .HasColumnName("IMPORTE");
+
+                entity.Property(fp => fp.DESCRIPCION)
+                    .HasMaxLength(100)
+                    .HasColumnName("DESCRIPCION");
+
+                // Relaciones
+                entity.HasOne(fp => fp.Factura)
+                    .WithMany(f => f.Pagos)
+                    .HasForeignKey(fp => new { fp.SERIE, fp.NUMERO, fp.N })
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(fp => fp.FormaPago)
+                    .WithMany()
+                    .HasForeignKey(fp => fp.CODTIPOPAGO)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+        }
+
+        private void ConfigureSqlConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SqlConfiguration>(entity =>
+            {
+                entity.ToTable("SqlConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Server)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Database)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Password)
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.UseIntegratedSecurity)
+                    .IsRequired();
+
+                entity.Property(e => e.ConnectionTimeout)
+                    .IsRequired();
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.Server, e.Database })
+                    .IsUnique()
+                    .HasDatabaseName("IX_SqlConfigurations_ServerDatabase");
+            });
+        }
+
+        private void ConfigureMethodConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MethodConfiguration>(entity =>
+            {
+                entity.ToTable("MethodConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.MethodName)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.HttpMethod)
+                    .IsRequired()
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Endpoint)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.IsEnabled)
+                    .IsRequired();
+
+                entity.Property(e => e.IsAutomaticSync)
+                    .IsRequired();
+
+                entity.Property(e => e.SyncIntervalMinutes)
+                    .IsRequired();
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.LastExecuted);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
+                    .IsUnique()
+                    .HasDatabaseName("IX_MethodConfigurations_MethodHttpMethod");
+            });
+        }
+
+        private void ConfigureSwaggerConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SwaggerConfiguration>(entity =>
+            {
+                entity.ToTable("SwaggerConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.MethodName)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.HttpMethod)
+                    .IsRequired()
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Endpoint)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.IsVisible)
+                    .IsRequired();
+
+                entity.Property(e => e.Category)
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
+                    .IsUnique()
+                    .HasDatabaseName("IX_SwaggerConfigurations_MethodHttpMethod");
+            });
+        }
+
+        private void ConfigureSystemConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SystemConfiguration>(entity =>
+            {
+                entity.ToTable("SystemConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Key)
+                    .IsRequired()
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.Value)
+                    .IsRequired()
+                    .HasMaxLength(2000);
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.HasIndex(e => e.Key)
+                    .IsUnique()
+                    .HasDatabaseName("IX_SystemConfigurations_Key");
+            });
+        }
+
+        private void ConfigureSecurityConfiguration(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SecurityConfiguration>(entity =>
+            {
+                entity.ToTable("SecurityConfigurations");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.PasswordHash)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.LoginAttempts)
+                    .IsRequired();
+
+                entity.Property(e => e.LastLogin);
+
+                entity.Property(e => e.LockedUntil);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasDefaultValueSql("GETDATE()");
             });
         }
 
@@ -539,158 +953,5 @@ namespace ApiSAPBridge.Data
                 }
             }
         }
-        private void ConfigureSqlConfiguration(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SqlConfiguration>(entity =>
-            {
-                entity.ToTable("SqlConfigurations");
-                entity.HasKey(e => e.Id);
-
-                entity.Property(e => e.Server)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.Database)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.Username)
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.Password)
-                    .HasMaxLength(500);
-
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.HasIndex(e => new { e.Server, e.Database })
-                    .IsUnique()
-                    .HasDatabaseName("IX_SqlConfigurations_ServerDatabase");
-            });
-        }
-
-        private void ConfigureMethodConfiguration(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<MethodConfiguration>(entity =>
-            {
-                entity.ToTable("MethodConfigurations");
-                entity.HasKey(e => e.Id);
-
-                entity.Property(e => e.MethodName)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.HttpMethod)
-                    .IsRequired()
-                    .HasMaxLength(10);
-
-                entity.Property(e => e.Endpoint)
-                    .IsRequired()
-                    .HasMaxLength(500);
-
-                entity.Property(e => e.Description)
-                    .HasMaxLength(1000);
-
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
-                    .IsUnique()
-                    .HasDatabaseName("IX_MethodConfigurations_MethodHttpMethod");
-            });
-        }
-
-        private void ConfigureSwaggerConfiguration(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SwaggerConfiguration>(entity =>
-            {
-                entity.ToTable("SwaggerConfigurations");
-                entity.HasKey(e => e.Id);
-
-                entity.Property(e => e.MethodName)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.HttpMethod)
-                    .IsRequired()
-                    .HasMaxLength(10);
-
-                entity.Property(e => e.Endpoint)
-                    .IsRequired()
-                    .HasMaxLength(500);
-
-                entity.Property(e => e.Category)
-                    .HasMaxLength(100);
-
-                entity.Property(e => e.Description)
-                    .HasMaxLength(1000);
-
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.HasIndex(e => new { e.MethodName, e.HttpMethod })
-                    .IsUnique()
-                    .HasDatabaseName("IX_SwaggerConfigurations_MethodHttpMethod");
-            });
-        }
-
-        private void ConfigureSystemConfiguration(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SystemConfiguration>(entity =>
-            {
-                entity.ToTable("SystemConfigurations");
-                entity.HasKey(e => e.Id);
-
-                entity.Property(e => e.Key)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                entity.Property(e => e.Value)
-                    .IsRequired()
-                    .HasMaxLength(2000);
-
-                entity.Property(e => e.Description)
-                    .HasMaxLength(1000);
-
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.HasIndex(e => e.Key)
-                    .IsUnique()
-                    .HasDatabaseName("IX_SystemConfigurations_Key");
-            });
-        }
-
-        private void ConfigureSecurityConfiguration(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<SecurityConfiguration>(entity =>
-            {
-                entity.ToTable("SecurityConfigurations");
-                entity.HasKey(e => e.Id);
-
-                entity.Property(e => e.PasswordHash)
-                    .IsRequired()
-                    .HasMaxLength(500);
-
-                entity.Property(e => e.CreatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasDefaultValueSql("GETDATE()");
-            });
-        }
-    
     }
 }
