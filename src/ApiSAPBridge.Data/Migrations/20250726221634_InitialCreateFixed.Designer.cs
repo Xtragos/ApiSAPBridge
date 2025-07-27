@@ -4,6 +4,7 @@ using ApiSAPBridge.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiSAPBridge.Data.Migrations
 {
     [DbContext(typeof(ApiSAPBridgeDbContext))]
-    partial class ApiSAPBridgeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250726221634_InitialCreateFixed")]
+    partial class InitialCreateFixed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
