@@ -25,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\services\\databaseinitializerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\services\\databaseinitializerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|c:\\desarrollo\\visual studio\\visual studio 2022\\proyectos\\apisapbridge\\src\\apisapbridge.configuration\\resources\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{48D9E3F5-D5CE-4221-8D26-DA7516A23680}|src\\ApiSAPBridge.Configuration\\ApiSAPBridge.Configuration.csproj|solutionrelative:src\\apisapbridge.configuration\\resources\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +46,7 @@
               "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Services\\SqlServerVersionDetectorService.cs",
               "ViewState": "AgIAAC8BAAAAAAAAAAAuwFIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T02:31:12.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T02:31:12.513Z"
             },
             {
               "$type": "Document",
@@ -63,8 +58,7 @@
               "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Services\\DatabaseTestService.cs",
               "ViewState": "AgIAAAMBAAAAAAAAAAAuwCYBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T02:16:57.417Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T02:16:57.417Z"
             },
             {
               "$type": "Document",
@@ -82,14 +76,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CreateDatabase.sql ",
+              "Title": "CreateDatabase.sql",
               "DocumentMoniker": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Resources\\CreateDatabase.sql",
               "RelativeDocumentMoniker": "src\\ApiSAPBridge.Configuration\\Resources\\CreateDatabase.sql",
               "ToolTip": "C:\\Desarrollo\\Visual Studio\\Visual Studio 2022\\Proyectos\\ApiSAPBridge\\src\\ApiSAPBridge.Configuration\\Resources\\CreateDatabase.sql",
               "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Resources\\CreateDatabase.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-07-27T01:51:06.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T01:51:06.595Z"
             },
             {
               "$type": "Document",
@@ -101,8 +94,7 @@
               "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\Services\\DatabaseInitializerService.cs",
               "ViewState": "AgIAANgAAAAAAAAAAAAuwO8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T01:47:30.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-27T01:47:30.21Z"
             },
             {
               "$type": "Document",
@@ -114,8 +106,7 @@
               "RelativeToolTip": "src\\ApiSAPBridge.Configuration\\UI\\Forms\\SqlConfigForm.cs",
               "ViewState": "AgIAAKUCAAAAAAAAAAAuwLwCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T22:27:27.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T22:27:27.45Z"
             }
           ]
         }
